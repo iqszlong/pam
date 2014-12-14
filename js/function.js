@@ -28,47 +28,47 @@ $(function(){
     $routeProvider.when('/', {
           templateUrl: 'home.htm',
           controller:function(){
-            $('#home').addClass('active').siblings('li').removeClass('active');
+            
           }
         }).when('/notice', {
           templateUrl: 'notice.htm',
           controller:function(){
-            $('#notice').addClass('active').siblings('li').removeClass('active');
+           
           }
         }).when('/notice/:id', {
           templateUrl: 'notice_detail.htm',
           controller:function($scope, $routeParams){
-            $('#notice').addClass('active').siblings('li').removeClass('active');
+            
              $scope.id = $routeParams.id;
           }
         }).when('/download', {
           templateUrl: 'download.htm',
           controller:function(){
-            $('#download').addClass('active').siblings('li').removeClass('active');
+            
           }
         }).when('/log', {
           templateUrl: 'log.htm',
           controller:function(){
-            $('#log').addClass('active').siblings('li').removeClass('active');
+            
           }
         }).when('/demo', {
           controller:function(){
-            //$('#demo').addClass('active').siblings('li').removeClass('active');
+           
           }
         }).when('/service', {
           templateUrl: 'service.htm',
           controller:function(){
-            $('#service').addClass('active').siblings('li').removeClass('active');
+            
           }
         }).when('/apps', {
           templateUrl: 'apps.htm',
           controller:function(){
-            $('#apps').addClass('active').siblings('li').removeClass('active');
+           
           }
         }).when('/appreciation', {
           templateUrl: 'appreciation.htm',
           controller:function(){
-            $('#appreciation').addClass('active').siblings('li').removeClass('active');
+           
           }
         }).
         otherwise({templateUrl: '404.htm'});
@@ -103,47 +103,47 @@ $(function(){
   });
 
 
-  app.directive('productFeature', function(){
+  app.directive('contentBoxList', function(){
     return {
       restrict: 'E',
-      templateUrl: 'product-feature.htm',
+      templateUrl: 'content-box-list.htm',
       controller:['$http',function($http){
           var features = this;
           features.items = [];
-          $http.get('features.json').success(function(data){
+          $http.get('img-list.json').success(function(data){
               features.items = data;
           });
       }],
-      controllerAs: 'features'
+      controllerAs: 'img'
     };
   });
 
-  app.directive('productFeatureMedia', function(){
-    return {
-      restrict: 'E',
-      templateUrl: 'product-feature-media.htm',
-      controller:['$http',function($http){
-          var features = this;
-          features.items = [];
-          $http.get('features.json').success(function(data){
-              features.items = data;
-          });
-      }],
-      controllerAs: 'features'
-    };
-  });
+  // app.directive('productFeatureMedia', function(){
+  //   return {
+  //     restrict: 'E',
+  //     templateUrl: 'product-feature-media.htm',
+  //     controller:['$http',function($http){
+  //         var features = this;
+  //         features.items = [];
+  //         $http.get('features.json').success(function(data){
+  //             features.items = data;
+  //         });
+  //     }],
+  //     controllerAs: 'features'
+  //   };
+  // });
 
 
-  app.controller('tabController', function(){
-    this.tab = 1;
-    this.selectTab = function(setTab) {
-        this.tab = setTab;
+  // app.controller('tabController', function(){
+  //   this.tab = 1;
+  //   this.selectTab = function(setTab) {
+  //       this.tab = setTab;
 
-    };
-    this.isSelected = function(checkTab){
-      return this.tab === checkTab;
-    };
-  });
+  //   };
+  //   this.isSelected = function(checkTab){
+  //     return this.tab === checkTab;
+  //   };
+  // });
 
 
 

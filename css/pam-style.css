@@ -9301,6 +9301,16 @@ body {
   -moz-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  -o-box-pack: justify;
+  box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
   -moz-box-align: start ;
   -webkit-box-align: start ;
   -ms-flex-align: start;
@@ -9311,10 +9321,11 @@ body {
   align-items: flex-start;
 }
 .content-box-list .content-box-item {
-  height: 300px;
   margin-bottom: 15px;
-  margin-right: 15px;
   background: #fafafa;
+}
+.content-box-list .content-box-item img {
+  height: 200px;
 }
 .content-box-item {
   background: #ffffff;
@@ -9330,7 +9341,6 @@ body {
 }
 .content-box-item img {
   display: block;
-  height: 300px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;

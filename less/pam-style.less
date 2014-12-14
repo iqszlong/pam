@@ -66,15 +66,19 @@ html,body{
 	.flexbox();
 	.flex-direction(row);
     .flex-wrap(wrap);
-    //.justify-content(space-between);
+    .justify-content(space-between);
     .align-items(flex-start);
 
     .content-box-item{
 		//width: 320px;
-		height: 300px;
+		//height: 300px;
 		margin-bottom: 15px;
-		margin-right: 15px;
+		//margin-right: 15px;
 		background: @gary-color;
+
+		img{
+			height: 200px;
+		}
 	}
 
 }
@@ -85,6 +89,6 @@ html,body{
 	.box-shadow(0 0 20px rgba(0, 0, 0, 0.2));
 	.border-radius(5px);
 	//img{.img-responsive();}
-	img{display: block; height: 300px; .border-radius(5px);}
+	img{display: block;  .border-radius(5px);}
 }
 
