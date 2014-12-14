@@ -1,7 +1,7 @@
 <div class="content-box-list">
   <div class="content-box-item" ng-repeat="imgitem in img.items">
-      <a href="{{imgitem.images.full}}" title="{{imgitem.title}}" target="_blank">
-          <img ng-src="{{imgitem.images.middle}}" alt="{{imgitem.title}}">
+      <a href="{{imgitem.images[0].full}}" title="{{imgitem.title}}" target="_blank">
+          <img ng-src="{{imgitem.images[0].middle}}" alt="{{imgitem.title}}">
       </a>
   </div>
 </div>
