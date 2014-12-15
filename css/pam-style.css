@@ -7714,6 +7714,23 @@ button.close {
     bottom: 20px;
   }
 }
+.clearfix,
+.dl-horizontal dd,
+.container,
+.container-fluid,
+.row,
+.form-horizontal .form-group,
+.btn-toolbar,
+.btn-group-vertical > .btn-group,
+.nav,
+.navbar,
+.navbar-header,
+.navbar-collapse,
+.pager,
+.panel-body,
+.modal-footer {
+  *zoom: 1;
+}
 .clearfix:before,
 .clearfix:after,
 .dl-horizontal dd:before,
@@ -7744,7 +7761,7 @@ button.close {
 .panel-body:after,
 .modal-footer:before,
 .modal-footer:after {
-  content: " ";
+  content: "";
   display: table;
 }
 .clearfix:after,
@@ -9205,6 +9222,7 @@ body {
 }
 .header .navbar {
   margin-bottom: 0;
+  z-index: 99;
 }
 .main {
   -webkit-box-flex: 1;
