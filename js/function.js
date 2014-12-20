@@ -24,7 +24,7 @@ $(function(){
 
 (function() {
   var app = angular.module('webSite', ['ngRoute']).
-    config(['$routeProvider', function($routeProvider) {
+    config(['$routeProvider', '$locationProvider', function($routeProvider,$locationProvider) {
     $routeProvider.when('/', {
           templateUrl: 'home.htm',
           controller:function(){
@@ -72,6 +72,7 @@ $(function(){
           }
         }).
         otherwise({templateUrl: '404.htm'});
+        $locationProvider.html5Mode(true);
   }]);
   
 
