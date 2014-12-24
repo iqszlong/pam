@@ -8917,23 +8917,20 @@ body {
 }
 .content-box-list.display-box .content-box-item {
   height: 18rem;
-  width: 32rem;
-  overflow: hidden;
   margin-bottom: 15px;
   background: #fafafa;
 }
 .content-box-list.display-box .content-box-item img {
+  margin: auto;
   display: block;
+  height: 18rem;
   max-width: 100%;
-  height: auto;
-  -webkit-transition: all 0.2s ease-out 0.1s;
-  -o-transition: all 0.2s ease-out 0.1s;
-  transition: all 0.2s ease-out 0.1s;
 }
 .content-box-list.display-box .content-box-item a {
   display: block;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 .content-box-list.display-waterfall {
   -webkit-column-count: 3;
