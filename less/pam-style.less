@@ -1,9 +1,10 @@
 @import '../../bootbox/font-awesome-less/font-awesome.less';
 @import '../../bootbox/bootstrap-less/bootstrap.less';
 //@import '../../bootbox/bootstrap-less/theme.less';
-@import '../../bootbox/less/bootbox.less';
+@import (reference) '../../bootbox/less/bootbox.less';
 
 //@body-bg: #f4f4f4;
+@base-font-size: 62.5%;
 
 html,body{
 	height: 100%;
@@ -15,8 +16,13 @@ html,body{
 }
 
 .header{
-	.navbar{margin-bottom: 0; z-index: 99;}
 	height: 50px;
+
+	.navbar{
+		margin-bottom: 0; z-index: 99;
+	}
+	
+
 	.order(1);
 
 }
@@ -42,7 +48,7 @@ html,body{
 	background: @gray-lighter;
 	//height: 100%;
 	padding: 15px;
-	//display: none;
+	display: none;
 
 }
 
@@ -55,7 +61,7 @@ html,body{
 
 	//height: 100%;
 	//background: @white-color;
-
+	background: @gary-color;
 	padding: 15px;
 	
 
@@ -68,14 +74,17 @@ html,body{
 	
 	//box显示方式
 	&.display-box{
+		
 		.flexbox();
+		.flex(1);
 		.flex-direction(row);
 	    .flex-wrap(wrap);
 	    .justify-content(space-between);
 	    .align-items(flex-start);
+	    
 
 	    .content-box-item{
-			height: 18rem;
+			//height: 18rem;
 			//width: 32rem;
 			
 			//.flex(1 1 0);
@@ -88,7 +97,7 @@ html,body{
 			//margin: auto;
 			//margin-right: 15px;
 			margin-bottom: 15px;
-			background: @gary-color;
+			background: @white-color;
 			
 
 
@@ -102,21 +111,38 @@ html,body{
 				
 
 			}
-			//img{.img-responsive();.transition(all 0.2s ease-out 0.1s);}
+			
 			a{
 				display: block;	
 				.brimming();
 				overflow: hidden;
-				
+				text-decoration: none;
 				
 
-				// &:hover{
-				// 	img{
-						
-				// 	}
-				// }
-				
+				&:hover{
+					.item-title{
+						color: @brand-primary;
+					}
+				}
 			}
+			
+
+			.item-content{
+				padding: 10px 15px;
+			}
+			.item-title{
+				margin: 0;
+				color: @text-color;
+				.font-size-rems(14);
+				.ws_hide();
+				.transition(all 0.2s ease-out 0.1s);
+			}
+			.item-desc{
+				margin: 10px 0 0;
+				color: @normal-color;
+				.font-size-rems(12);
+			}
+
 
 			
 

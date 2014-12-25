@@ -1,8 +1,8 @@
 [
   {
     "type": "picture" , 
-    "title": "标题" , 
-    "desc": "描述。",
+    "title": "I Am Number Four " , 
+    "desc": "关键第四号",
     "images":
       {
         "full": "http://pic.yupoo.com/huang-yu/DMXLxXns/IEXPI.jpg",
@@ -100,8 +100,8 @@
   },
   { 
     "type": "picture", 
-    "title": "标题", 
-    "desc": "描述。",
+    "title": "钢铁侠3", 
+    "desc": "钢铁侠3",
     "images":
       {
         "full": "http://pic.yupoo.com/huang-yu/DMXLNysI/9prVV.jpg",
