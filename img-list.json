@@ -3,6 +3,8 @@
     "type": "picture" , 
     "title": "I Am Number Four " , 
     "desc": "关键第四号",
+    "scale": "16:9",
+    "resolution": "1366×768",
     "images":
       {
         "full": "http://pic.yupoo.com/huang-yu/DMXLxXns/IEXPI.jpg",
@@ -12,8 +14,10 @@
   },
   { 
     "type": "picture", 
-    "title": "标题", 
-    "desc": "描述。",
+    "title": "女孩", 
+    "desc": "骑车女孩",
+    "scale": "16:9",
+    "resolution": "1920×1200",
     "images":
       {
         "full": "http://pic.yupoo.com/huang-yu/Eh8ehs9q/Xoo5G.jpg",
@@ -23,8 +27,10 @@
   },
   { 
     "type": "picture", 
-    "title": "标题", 
-    "desc": "描述。",
+    "title": "狼的诱惑", 
+    "desc": "韩国电影",
+    "scale": "4:3",
+    "resolution": "1024×768",
     "images":
       {
         "full": "http://pic.yupoo.com/huang-yu/CnALHa9B/LvfDJ.jpg",
@@ -34,158 +40,216 @@
   },
   { 
     "type": "picture", 
-    "title": "标题", 
-    "desc": "描述。",
+    "title": "基督再临", 
+    "desc": "由索尼公司出品，在2010年1月22日上映。",
+    "scale": "4:3",
+    "resolution": "1024×768",
     "images":
       {
-        "full": "http://pic.yupoo.com/huang-yu/CnALHa9B/LvfDJ.jpg",
+        "full": "http://pic.yupoo.com/huang-yu/CnAMDSl6/TvKEn.jpg",
         "middle": "http://pic.yupoo.com/huang-yu/CnAMDSl6/medium.jpg"
       }
     
   },
   { 
     "type": "picture", 
-    "title": "标题", 
-    "desc": "描述。",
+    "title": "闰年", 
+    "desc": "环球影业出品的一部爱情电影，于2010年1月8日在美国上映。",
+    "scale": "16:9",
+    "resolution": "1600x1050",
     "images":
       {
         "full": "http://pic.yupoo.com/huang-yu/CnAMEUZD/aN9Xk.jpg",
         "middle": "http://pic.yupoo.com/huang-yu/CnAMEUZD/medium.jpg"
-      }
-    
+      },
+    "externalLink": "http://pic.yupoo.com/huang-yu/CnAMEUZD/aN9Xk.jpg"
   },
   { 
     "type": "picture", 
-    "title": "标题", 
-    "desc": "描述。",
+    "title": "追梦女郎", 
+    "desc": "梦工厂电影发行公司出品,2006年12月25日上映",
+    "scale": "4:3",
+    "resolution": "1280×1024",
     "images":
       {
         "full": "http://pic.yupoo.com/huang-yu/CnAML4KT/mX9ft.jpg",
         "middle": "http://pic.yupoo.com/huang-yu/CnAML4KT/medish.jpg"
-      }
-    
+      },
+    "externalLink": "http://pic.yupoo.com/huang-yu/CnAML4KT/mX9ft.jpg"
   },
   { 
     "type": "picture", 
-    "title": "标题", 
-    "desc": "描述。",
-    "images":
-      {
-        "full": "http://pic.yupoo.com/huang-yu/CnAMNc9W/20O5C.jpg",
-        "middle": "http://pic.yupoo.com/huang-yu/CnAMNc9W/medium.jpg"
-      }
-    
-  },
-  { 
-    "type": "picture", 
-    "title": "标题", 
-    "desc": "描述。",
+    "title": "追梦女郎", 
+    "desc": "梦工厂电影发行公司出品,2006年12月25日上映",
+    "scale": "4:3",
+    "resolution": "1280×1024",
     "images":
       {
         "full": "http://pic.yupoo.com/huang-yu/CnAMJtR6/JYknL.jpg",
         "middle": "http://pic.yupoo.com/huang-yu/CnAMJtR6/medium.jpg"
-      }
-    
+      },
+    "externalLink": "http://pic.yupoo.com/huang-yu/CnAMJtR6/JYknL.jpg"
   },
   { 
     "type": "picture", 
-    "title": "标题", 
-    "desc": "描述。",
+    "title": "深渊幽灵", 
+    "desc": "迪士尼2003年所推出的一部纪录片，这是一部3D立体电影",
+    "scale": "4:3",
+    "resolution": "1024×768",
+    "images":
+      {
+        "full": "http://pic.yupoo.com/huang-yu/CnAMNc9W/20O5C.jpg",
+        "middle": "http://pic.yupoo.com/huang-yu/CnAMNc9W/medium.jpg"
+      },
+    "externalLink": "http://pic.yupoo.com/huang-yu/CnAMNc9W/20O5C.jpg"
+  },
+  
+  { 
+    "type": "picture", 
+    "title": "Oceans (海洋)", 
+    "desc": "纪录片，由雅克.贝汉(Jacques Perrin)和雅克.克鲁奥德(Jacques Cluzaud)执导。",
+    "scale": "16:9",
+    "resolution": "1920×1200",
     "images":
       {
         "full": "http://pic.yupoo.com/huang-yu/CnAMHuKz/10PPaq.jpg",
         "middle": "http://pic.yupoo.com/huang-yu/CnAMHuKz/medium.jpg"
-      }
-    
+      },
+    "externalLink": "http://pic.yupoo.com/huang-yu/CnAMHuKz/10PPaq.jpg"
   },
   { 
     "type": "picture", 
     "title": "钢铁侠3", 
     "desc": "钢铁侠3",
+    "scale": "16:9",
+    "resolution": "1366×768",
     "images":
       {
         "full": "http://pic.yupoo.com/huang-yu/DMXLNysI/9prVV.jpg",
         "middle": "http://pic.yupoo.com/huang-yu/DMXLNysI/medium.jpg"
-      }
-    
+      },
+    "externalLink": "http://pic.yupoo.com/huang-yu/DMXLNysI/9prVV.jpg"
+  },
+  {
+    "type": "picture", 
+    "title": "钢铁侠3", 
+    "desc": "钢铁侠3",
+    "scale": "16:9",
+    "resolution": "1366×768",
+    "images":
+      {
+        "full": "http://pic.yupoo.com/huang-yu/DMXLyvab/NZ6mg.jpg",
+        "middle": "http://pic.yupoo.com/huang-yu/DMXLyvab/medish.jpg"
+      },
+    "externalLink": "http://pic.yupoo.com/huang-yu/DMXLyvab/NZ6mg.jpg"
   },
   {
     "type": "picture", 
     "title": "穿靴子的猫", 
     "desc": "穿靴子的猫",
+    "scale": "16:9",
+    "resolution": "1366×768",
     "images":
       {
         "full": "http://pic.yupoo.com/huang-yu/DMXLN2hu/hABdy.jpg",
         "middle": "http://pic.yupoo.com/huang-yu/DMXLN2hu/medish.jpg"
-      }
-    
+      },
+    "externalLink": "http://pic.yupoo.com/huang-yu/DMXLN2hu/hABdy.jpg"
   },
   {
     "type": "picture", 
     "title": "碟中谍4", 
     "desc": "碟中谍4",
+    "scale": "16:9",
+    "resolution": "1366×768",
     "images":
       {
         "full": "http://pic.yupoo.com/huang-yu/DMXLMJQ1/DNeLt.jpg",
         "middle": "http://pic.yupoo.com/huang-yu/DMXLMJQ1/medish.jpg"
-      }
-    
+      },
+    "externalLink": "http://pic.yupoo.com/huang-yu/DMXLMJQ1/DNeLt.jpg"
   },
   {
     "type": "picture", 
     "title": "东方教主", 
     "desc": "笑傲江湖",
+    "scale": "16:9",
+    "resolution": "1366×768",
     "images":
       {
         "full": "http://pic.yupoo.com/huang-yu/DMXLNzLJ/WJ9Ts.jpg",
         "middle": "http://pic.yupoo.com/huang-yu/DMXLNzLJ/medish.jpg"
-      }
-    
+      },
+    "externalLink": "http://pic.yupoo.com/huang-yu/DMXLNzLJ/WJ9Ts.jpg"
   },
   {
     "type": "picture", 
     "title": "白冰", 
     "desc": "隋唐演义",
+    "scale": "16:9",
+    "resolution": "1366×768",
     "images":
       {
         "full": "http://pic.yupoo.com/huang-yu/DMXLNdXC/CXVB5.jpg",
         "middle": "http://pic.yupoo.com/huang-yu/DMXLNdXC/medish.jpg"
-      }
+      },
+    "externalLink": "http://pic.yupoo.com/huang-yu/DMXLNdXC/CXVB5.jpg"
     
   },
   {
     "type": "picture", 
     "title": "杀手47", 
     "desc": "杀手47",
+    "scale": "16:9",
+    "resolution": "1366×768",
     "images":
       {
         "full": "http://pic.yupoo.com/huang-yu/DMXLN9E0/2wiKw.jpg",
         "middle": "http://pic.yupoo.com/huang-yu/DMXLN9E0/medish.jpg"
-      }
+      },
+    "externalLink": "http://pic.yupoo.com/huang-yu/DMXLN9E0/2wiKw.jpg"
     
   },
   {
     "type": "picture", 
     "title": "圣安娜奇迹", 
     "desc": "圣安娜奇迹剧照",
+    "scale": "16:9",
+    "resolution": "1920×1080",
     "images":
       {
         "full": "http://pic.yupoo.com/huang-yu/DMXLNY3O/IcSl2.jpg",
         "middle": "http://pic.yupoo.com/huang-yu/DMXLNY3O/medish.jpg"
-      }
-    
+      },
+    "externalLink": "http://pic.yupoo.com/huang-yu/DMXLNY3O/IcSl2.jpg"
   },
   {
     "type": "picture", 
-    "title": "钢铁侠3", 
-    "desc": "钢铁侠3",
+    "title": "Vicni", 
+    "desc": "Beautyleg",
+    "scale": "3:2",
+    "resolution": "1600×2400",
     "images":
       {
-        "full": "http://pic.yupoo.com/huang-yu/DMXLyvab/NZ6mg.jpg",
-        "middle": "http://pic.yupoo.com/huang-yu/DMXLyvab/medish.jpg"
-      }
-    
+        "full": "http://7te9fb.com1.z0.glb.clouddn.com/wallpaper0016.jpg",
+        "middle": "http://7te9fb.com1.z0.glb.clouddn.com/wallpaper0016.jpg-medish"
+      },
+    "externalLink": "http://7te9fb.com1.z0.glb.clouddn.com/wallpaper0016.jpg"
+  },
+  {
+    "type": "video", 
+    "title": "Vicni", 
+    "desc": "Beautyleg",
+    "scale": "4:3",
+    "resolution": "1600×2400",
+    "images":
+      {
+        "full": "http://pic.yupoo.com/huang-yu/E0ZgZ0fR/medish.jpg",
+        "middle": "http://pic.yupoo.com/huang-yu/E0ZgZ0fR/medium.jpg"
+      },
+    "externalLink": "http://iqszlong-media.qiniudn.com/57daf5537daf0286f2edb7889d4369da.mp4"
   }
+  
   
   
   

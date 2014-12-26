@@ -15,11 +15,11 @@ $(function(){
          return false;
       }); 
 
-      $( document ).on("click",'.navbar-form',function(){
-        $('.search-field').focus();
-      });
+      // $( document ).on("click",'.navbar-form',function(){
+      //   $('.search-field').focus();
+      // });
 
-      console.log(1);
+      //console.log(1);
 });
 
 (function() {
@@ -28,7 +28,7 @@ $(function(){
     $routeProvider.when('/', {
           templateUrl: 'home.htm',
           controller:function(){
-            
+             
           }
         }).when('/notice', {
           templateUrl: 'notice.htm',

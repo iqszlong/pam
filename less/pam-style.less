@@ -89,7 +89,7 @@ html,body{
 			
 			//.flex(1 1 0);
 			//width: 320px;
-			//overflow: hidden;
+			overflow: hidden;
 			//max-height: 300px;
 			//width: 100%;
 			//.justify-content(stretch);
@@ -117,11 +117,19 @@ html,body{
 				.brimming();
 				overflow: hidden;
 				text-decoration: none;
+				position: relative;
+				z-index: 1;
 				
 
 				&:hover{
-					.item-title{
-						color: @brand-primary;
+					// .item-title{
+					// 	color: @brand-primary;
+					// }
+					.item-content{
+						bottom:0;
+					}
+					.item-mask{
+						.background-rgba(0,0,0,0.3);
 					}
 				}
 			}
@@ -129,10 +137,21 @@ html,body{
 
 			.item-content{
 				padding: 10px 15px;
+				position:absolute;
+				z-index: 1;
+				
+				//top:100%;
+				left: 0;
+				right: 0;
+				bottom:-100%;
+				background: @white-color;
+				//.background-rgba(255,255,255,0.9);
+				.transition(all 0.2s ease-out 0.1s);
 			}
 			.item-title{
 				margin: 0;
 				color: @text-color;
+				font-weight: bold;
 				.font-size-rems(14);
 				.ws_hide();
 				.transition(all 0.2s ease-out 0.1s);
@@ -140,10 +159,24 @@ html,body{
 			.item-desc{
 				margin: 10px 0 0;
 				color: @normal-color;
+				display: block;
+				.ws_hide();
 				.font-size-rems(12);
 			}
 
+			.item-mask{
+				.flexbox();	
+				left: 0;
+				right: 0;
+				top:0;
+				bottom: 0;
+				position:absolute;
+				z-index: 1;
+				text-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+				.transition(all 0.2s ease-out 0.1s);
 
+				.fa{.font-size-rems(45);  color: @white-color; margin: auto;}
+			}
 			
 
 			
@@ -168,8 +201,8 @@ html,body{
 	//border:1px solid @solid-color;
 	background: @white-color;
 	.box-shadow(0 0 20px rgba(0, 0, 0, 0.2));
-	.border-radius(5px);
+	.border-radius(3px);
 	//img{.img-responsive();}
-	img{display: block;  .border-radius(5px);}
+	img{display: block;  .border-radius(3px);}
 }
 
