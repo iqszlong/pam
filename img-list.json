@@ -238,17 +238,31 @@
   },
   {
     "type": "video", 
-    "title": "Vicni", 
-    "desc": "Beautyleg",
+    "title": "视频", 
+    "desc": "测试视频",
     "scale": "4:3",
     "resolution": "1600×2400",
     "images":
       {
         "full": "http://pic.yupoo.com/huang-yu/E0ZgZ0fR/medish.jpg",
-        "middle": "http://pic.yupoo.com/huang-yu/E0ZgZ0fR/medium.jpg"
+        "middle": "http://pic.yupoo.com/huang-yu/E0ZgZ0fR/medish.jpg"
       },
     "externalLink": "http://iqszlong-media.qiniudn.com/57daf5537daf0286f2edb7889d4369da.mp4"
+  },
+  {
+    "type": "picture", 
+    "title": "Vicni", 
+    "desc": "Beautyleg",
+    "scale": "3:2",
+    "resolution": "2400×1600",
+    "images":
+      {
+        "full": "http://7te9fb.com1.z0.glb.clouddn.com/wallpaper0046.jpg",
+        "middle": "http://7te9fb.com1.z0.glb.clouddn.com/wallpaper0046.jpg-medish"
+      },
+    "externalLink": "http://7te9fb.com1.z0.glb.clouddn.com/wallpaper0046.jpg"
   }
+  
   
   
   
