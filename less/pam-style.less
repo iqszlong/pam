@@ -19,13 +19,16 @@ html,body{
 
 .header{
 	height: 50px;
+	.order(1);
 
 	.navbar{
 		margin-bottom: 0; z-index: 99;
 	}
 	
-
-	.order(1);
+	.navbar-brand{
+		font-family:Impact;
+	}
+	
 
 }
 
@@ -89,6 +92,14 @@ html,body{
 			}
 			
 		}
+
+		@media (min-width: 240px) and (max-width: 480px) {
+			.flex-direction(column);
+			.content-box-item{
+				img{width: 100%;height: auto;}
+			}
+
+		}
 	}
 
 	//瀑布流显示方式
@@ -98,6 +109,13 @@ html,body{
 		
 			width: 100%;
 			.content-columns(4,15px);
+
+			@media (min-width: 240px) and (max-width: 480px) {
+				.content-columns(1,0);
+			}
+			@media (min-width: 480px) and (max-width: 640px) {
+				.content-columns(2,15px);
+			}
 		}
 		
 		.content-box-item{
@@ -119,7 +137,7 @@ html,body{
 		.content-box-item{
 			.animation(fadeIn 0.65s ease-in-out forwards);
 			&:nth-child(odd){
-					.animation-duration(0.448279s);
+					.animation-duration(0.85s);
 			}
 		}
 	}
@@ -213,6 +231,7 @@ html,body{
 	overflow: hidden;
 	.box-shadow(0 0 20px rgba(0, 0, 0, 0.2));
 	.border-radius(3px);
+	white-space: nowrap;
 
 	img{display: block;  .border-radius(3px);}
 	
@@ -247,6 +266,11 @@ html,body{
 		background: @white-color;
 		//.background-rgba(255,255,255,0.9);
 		.transition(all 0.2s ease-out 0.1s);
+
+		@media (min-width: 240px) and (max-width: 640px) {
+			position:static;
+			padding: 10px;
+		}
 	}
 	.item-title{
 		margin: 0;
@@ -257,7 +281,7 @@ html,body{
 		.transition(all 0.2s ease-out 0.1s);
 	}
 	.item-desc{
-		margin: 10px 0 0;
+		margin: 5px 0 0;
 		color: @normal-color;
 		display: block;
 		.ws_hide();

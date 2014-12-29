@@ -8075,6 +8075,9 @@ body {
   margin-bottom: 0;
   z-index: 99;
 }
+.header .navbar-brand {
+  font-family: Impact;
+}
 .main {
   -webkit-box-flex: 1;
   -moz-box-flex: 1;
@@ -8212,6 +8215,21 @@ body {
   height: 18rem;
   max-width: 100%;
 }
+@media (min-width: 240px) and (max-width: 480px) {
+  .content-box.display-box {
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+  }
+  .content-box.display-box .content-box-item img {
+    width: 100%;
+    height: auto;
+  }
+}
 .content-box.display-waterfall {
   width: 100%;
 }
@@ -8223,6 +8241,26 @@ body {
   -webkit-column-gap: 15px;
   -moz-column-gap: 15px;
   column-gap: 15px;
+}
+@media (min-width: 240px) and (max-width: 480px) {
+  .content-box.display-waterfall .content-box-list {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+    -webkit-column-gap: 0;
+    -moz-column-gap: 0;
+    column-gap: 0;
+  }
+}
+@media (min-width: 480px) and (max-width: 640px) {
+  .content-box.display-waterfall .content-box-list {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 15px;
+    -moz-column-gap: 15px;
+    column-gap: 15px;
+  }
 }
 .content-box.display-waterfall .content-box-item {
   margin-bottom: 15px;
@@ -8240,8 +8278,8 @@ body {
   animation: fadeIn 0.65s ease-in-out forwards;
 }
 .content-box-list.effect-1 .content-box-item:nth-child(odd) {
-  -webkit-animation-duration: 0.448279s;
-  animation-duration: 0.448279s;
+  -webkit-animation-duration: 0.85s;
+  animation-duration: 0.85s;
 }
 .content-box-list.effect-2 .content-box-item {
   -webkit-animation: fadeInDown 0.65s ease-in-out forwards;
@@ -8348,6 +8386,7 @@ body {
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
+  white-space: nowrap;
 }
 .content-box-item img {
   display: block;
@@ -8387,6 +8426,12 @@ body {
   -o-transition: all 0.2s ease-out 0.1s;
   transition: all 0.2s ease-out 0.1s;
 }
+@media (min-width: 240px) and (max-width: 640px) {
+  .content-box-item .item-content {
+    position: static;
+    padding: 10px;
+  }
+}
 .content-box-item .item-title {
   margin: 0;
   color: #333333;
@@ -8401,7 +8446,7 @@ body {
   transition: all 0.2s ease-out 0.1s;
 }
 .content-box-item .item-desc {
-  margin: 10px 0 0;
+  margin: 5px 0 0;
   color: #999999;
   display: block;
   white-space: nowrap;
