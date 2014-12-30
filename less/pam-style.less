@@ -306,6 +306,34 @@ html,body{
 
 
 //
+
+.fancybox-type-iframe{
+	.fancybox-inner{
+		overflow: hidden !important;
+	}
+	 .fancybox-nav {
+    	width: 60px;       
+		span {
+		    visibility: visible;
+		    opacity: 0.5;
+		}
+	
+
+		&:hover span {
+		    opacity: 1;
+		}
+	}
+
+	.fancybox-next {
+	    right: -60px;
+	}
+
+	.fancybox-prev {
+	    left: -60px;
+	}
+}
+
+//
 @-webkit-keyframes fallPerspective {
   100% { -webkit-transform: translateZ(0px) translateY(0px) rotateX(0deg); opacity: 1; }
 }

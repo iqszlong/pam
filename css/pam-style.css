@@ -8485,6 +8485,25 @@ body {
   color: #ffffff;
   margin: auto;
 }
+.fancybox-type-iframe .fancybox-inner {
+  overflow: hidden !important;
+}
+.fancybox-type-iframe .fancybox-nav {
+  width: 60px;
+}
+.fancybox-type-iframe .fancybox-nav span {
+  visibility: visible;
+  opacity: 0.5;
+}
+.fancybox-type-iframe .fancybox-nav:hover span {
+  opacity: 1;
+}
+.fancybox-type-iframe .fancybox-next {
+  right: -60px;
+}
+.fancybox-type-iframe .fancybox-prev {
+  left: -60px;
+}
 @-webkit-keyframes fallPerspective {
   100% {
     -webkit-transform: translateZ(0px) translateY(0px) rotateX(0deg);

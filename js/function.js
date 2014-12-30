@@ -20,6 +20,26 @@ $(function(){
       // });
 
       //console.log(1);
+
+      $(".fancybox").fancybox({
+          openEffect  : 'none',
+          closeEffect : 'none',
+          nextEffect  : 'none',
+          prevEffect  : 'none',
+          padding     : 10,
+          margin      : [20, 60, 20, 60],
+          helpers:  {
+                title : {
+                    type : 'inside'
+                },
+                overlay : {
+                    showEarly : false
+                }
+          }
+      });
+
+
+
       
 });
 

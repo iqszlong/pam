@@ -1,5 +1,6 @@
 [
   {
+    "id":"1",
     "type": "picture" , 
     "title": "I Am Number Four " , 
     "desc": "关键第四号",
@@ -13,6 +14,7 @@
     
   },
   { 
+    "id":"2",
     "type": "picture", 
     "title": "女孩", 
     "desc": "骑车女孩",
@@ -26,6 +28,7 @@
     
   },
   { 
+    "id":"3",
     "type": "picture", 
     "title": "狼的诱惑", 
     "desc": "韩国电影",
@@ -39,6 +42,7 @@
     
   },
   { 
+    "id":"4",
     "type": "picture", 
     "title": "基督再临", 
     "desc": "由索尼公司出品，在2010年1月22日上映。",
@@ -52,6 +56,7 @@
     
   },
   { 
+    "id":"5",
     "type": "picture", 
     "title": "闰年", 
     "desc": "环球影业出品的一部爱情电影，于2010年1月8日在美国上映。",
@@ -65,6 +70,7 @@
     "externalLink": "http://pic.yupoo.com/huang-yu/CnAMEUZD/aN9Xk.jpg"
   },
   { 
+    "id":"6",
     "type": "picture", 
     "title": "追梦女郎", 
     "desc": "梦工厂电影发行公司出品,2006年12月25日上映",
@@ -78,6 +84,7 @@
     "externalLink": "http://pic.yupoo.com/huang-yu/CnAML4KT/mX9ft.jpg"
   },
   { 
+    "id":"7",
     "type": "picture", 
     "title": "追梦女郎", 
     "desc": "梦工厂电影发行公司出品,2006年12月25日上映",
@@ -91,6 +98,7 @@
     "externalLink": "http://pic.yupoo.com/huang-yu/CnAMJtR6/JYknL.jpg"
   },
   { 
+    "id":"8",
     "type": "picture", 
     "title": "深渊幽灵", 
     "desc": "迪士尼2003年所推出的一部纪录片，这是一部3D立体电影",
@@ -105,6 +113,7 @@
   },
   
   { 
+    "id":"9",
     "type": "picture", 
     "title": "Oceans (海洋)", 
     "desc": "纪录片，由雅克.贝汉(Jacques Perrin)和雅克.克鲁奥德(Jacques Cluzaud)执导。",
@@ -118,6 +127,7 @@
     "externalLink": "http://pic.yupoo.com/huang-yu/CnAMHuKz/10PPaq.jpg"
   },
   { 
+    "id":"10",
     "type": "picture", 
     "title": "钢铁侠3", 
     "desc": "钢铁侠3",
@@ -131,6 +141,7 @@
     "externalLink": "http://pic.yupoo.com/huang-yu/DMXLNysI/9prVV.jpg"
   },
   {
+    "id":"11",
     "type": "picture", 
     "title": "钢铁侠3", 
     "desc": "钢铁侠3",
@@ -144,6 +155,7 @@
     "externalLink": "http://pic.yupoo.com/huang-yu/DMXLyvab/NZ6mg.jpg"
   },
   {
+    "id":"12",
     "type": "picture", 
     "title": "穿靴子的猫", 
     "desc": "穿靴子的猫",
@@ -157,6 +169,7 @@
     "externalLink": "http://pic.yupoo.com/huang-yu/DMXLN2hu/hABdy.jpg"
   },
   {
+    "id":"13",
     "type": "picture", 
     "title": "碟中谍4", 
     "desc": "碟中谍4",
@@ -170,6 +183,7 @@
     "externalLink": "http://pic.yupoo.com/huang-yu/DMXLMJQ1/DNeLt.jpg"
   },
   {
+    "id":"14",
     "type": "picture", 
     "title": "东方教主", 
     "desc": "笑傲江湖",
@@ -183,6 +197,7 @@
     "externalLink": "http://pic.yupoo.com/huang-yu/DMXLNzLJ/WJ9Ts.jpg"
   },
   {
+    "id":"15",
     "type": "picture", 
     "title": "白冰", 
     "desc": "隋唐演义",
@@ -197,6 +212,7 @@
     
   },
   {
+    "id":"17",
     "type": "picture", 
     "title": "杀手47", 
     "desc": "杀手47",
@@ -211,6 +227,7 @@
     
   },
   {
+    "id":"18",
     "type": "picture", 
     "title": "圣安娜奇迹", 
     "desc": "圣安娜奇迹剧照",
@@ -224,6 +241,7 @@
     "externalLink": "http://pic.yupoo.com/huang-yu/DMXLNY3O/IcSl2.jpg"
   },
   {
+    "id":"19",
     "type": "picture", 
     "title": "Vicni", 
     "desc": "Beautyleg",
@@ -237,6 +255,7 @@
     "externalLink": "http://7te9fb.com1.z0.glb.clouddn.com/wallpaper0016.jpg"
   },
   {
+    "id":"20",
     "type": "video", 
     "title": "视频", 
     "desc": "测试视频",
@@ -250,6 +269,7 @@
     "externalLink": "http://iqszlong-media.qiniudn.com/57daf5537daf0286f2edb7889d4369da.mp4"
   },
   {
+    "id":"21",
     "type": "picture", 
     "title": "Vicni", 
     "desc": "Beautyleg",
@@ -261,7 +281,22 @@
         "middle": "http://7te9fb.com1.z0.glb.clouddn.com/wallpaper0046.jpg-medish"
       },
     "externalLink": "http://7te9fb.com1.z0.glb.clouddn.com/wallpaper0046.jpg"
+  },
+  {
+    "id":"22",
+    "type": "video", 
+    "title": "优酷视频", 
+    "desc": "测试视频",
+    "scale": "3:2",
+    "resolution": "2400×1600",
+    "images":
+      {
+        "full": "http://g3.ykimg.com/0100641F46549B9419F29005C062B82A7596ED-3BEF-F10D-D363-610B33E4E6E4",
+        "middle": "http://g3.ykimg.com/0100641F46549B9419F29005C062B82A7596ED-3BEF-F10D-D363-610B33E4E6E4"
+      },
+    "externalLink": "http://player.youku.com/player.php/sid/XODU2MzQ2MTky/v.swf"
   }
+
   
   
   
