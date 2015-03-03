@@ -39,6 +39,11 @@ $(function(){
       });
 
 
+      Pace.on('hide', function(){
+        console.log('hide');
+        //$('.loading-layer').addClass('hidden');
+        $('.main').removeClass('hidden');
+      });
 
       
 });
