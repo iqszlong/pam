@@ -3,14 +3,13 @@
 
       <a ng-if="imgitem.type == 'picture'" class="fancybox" rel="group" href="{{imgitem.images.full}}" title="{{imgitem.title}}" target="_blank">
         <img class="item-img" ng-src="{{imgitem.images.middle}}" alt="{{imgitem.title}}">
+        <div class="item-mask"></div>
           <div class="item-content">
             <h2 class="item-title">
               <i class="fa fa-picture-o"></i>
-              <!-- <i ng-if="imgitem.type == 'picture'" class="fa fa-picture-o"></i>
-              <i ng-if="imgitem.type == 'video'" class="fa fa-play-circle-o"></i> -->
               {{imgitem.title}}
             </h2>
-            <p class="item-desc">{{imgitem.desc}}</p>
+            <div class="item-desc">{{imgitem.desc}}</div>
           </div>
       </a>
 
@@ -22,7 +21,7 @@
               <i class="fa fa-video-camera"></i>
               {{imgitem.title}}
             </h2>
-          	<p class="item-desc">{{imgitem.desc}}</p>
+          	<div class="item-desc">{{imgitem.desc}}</div>
           </div>
       </a>
 
