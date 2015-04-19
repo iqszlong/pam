@@ -1,9 +1,10 @@
-<div class="content-box-list effect-4">
+<div class="content-box-list effect-7">
   <div class="content-box-item" ng-repeat="imgitem in img.items">
 
       <a ng-if="imgitem.type == 'picture'" class="fancybox" rel="group" href="{{imgitem.images.full}}" title="{{imgitem.title}}" target="_blank">
         <img class="item-img" ng-src="{{imgitem.images.middle}}" alt="{{imgitem.title}}">
         <div class="item-mask"></div>
+        <div class="item-stuts">{{imgitem.resolution}}</div>
           <div class="item-content">
             <h2 class="item-title">
               <i class="fa fa-picture-o"></i>
@@ -16,6 +17,7 @@
       <a ng-if="imgitem.type == 'video'" class="fancybox fancybox.iframe" rel="group" href="{{imgitem.externalLink}}" title="{{imgitem.title}}" target="_blank">
           <img class="item-img" ng-src="{{imgitem.images.middle}}" alt="{{imgitem.title}}">
           <div class="item-mask"><i class="fa fa-play-circle-o"></i></div>
+          <div class="item-stuts">{{imgitem.resolution}}</div>
           <div class="item-content">
           	<h2 class="item-title">
               <i class="fa fa-video-camera"></i>

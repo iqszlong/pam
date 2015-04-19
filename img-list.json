@@ -250,7 +250,7 @@
     "images":
       {
         "full": "http://7te9fb.com1.z0.glb.clouddn.com/wallpaper0016.jpg",
-        "middle": "http://7te9fb.com1.z0.glb.clouddn.com/wallpaper0016.jpg-medish"
+        "middle": "http://7te9fb.com1.z0.glb.clouddn.com/wallpaper0016.jpg-1x1"
       },
     "externalLink": "http://7te9fb.com1.z0.glb.clouddn.com/wallpaper0016.jpg"
   },
@@ -260,7 +260,7 @@
     "title": "视频", 
     "desc": "测试视频",
     "scale": "4:3",
-    "resolution": "1600×2400",
+    "resolution": "00:09",
     "images":
       {
         "full": "http://pic.yupoo.com/huang-yu/E0ZgZ0fR/medish.jpg",
@@ -278,7 +278,7 @@
     "images":
       {
         "full": "http://7te9fb.com1.z0.glb.clouddn.com/wallpaper0046.jpg",
-        "middle": "http://7te9fb.com1.z0.glb.clouddn.com/wallpaper0046.jpg-medish"
+        "middle": "http://7te9fb.com1.z0.glb.clouddn.com/wallpaper0046.jpg-1x1"
       },
     "externalLink": "http://7te9fb.com1.z0.glb.clouddn.com/wallpaper0046.jpg"
   },
@@ -288,7 +288,7 @@
     "title": "优酷视频", 
     "desc": "测试视频",
     "scale": "3:2",
-    "resolution": "2400×1600",
+    "resolution": "03:09",
     "images":
       {
         "full": "http://g3.ykimg.com/0100641F46549B9419F29005C062B82A7596ED-3BEF-F10D-D363-610B33E4E6E4",

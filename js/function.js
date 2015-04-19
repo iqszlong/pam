@@ -22,8 +22,8 @@ $(function(){
       //console.log(1);
 
       $(".fancybox").fancybox({
-          openEffect  : 'none',
-          closeEffect : 'none',
+          //openEffect  : 'none',
+          //closeEffect : 'none',
           nextEffect  : 'none',
           prevEffect  : 'none',
           padding     : 10,
