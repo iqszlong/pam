@@ -8755,36 +8755,15 @@ body {
   width: 100%;
   margin: auto;
 }
-.content-box.display-normal {
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  -o-box-flex: 1;
-  box-flex: 1;
-  -webkit-flex: 1;
-  -moz-flex: 1;
-  -ms-flex: 1;
-  -o-flex: 1;
-  flex: 1;
-  -webkit-box-ordinal-group: 3;
-  -moz-box-ordinal-group: 3;
-  -o-box-ordinal-group: 3;
-  -webkit-order: 2;
-  -moz-order: 2;
-  -ms-order: 2;
-  -o-order: 2;
-  order: 2;
-  padding-top: 50px;
-  overflow: hidden;
-}
 .content-box.display-normal .content-box-item {
   position: relative;
   z-index: 1;
   float: left;
-  width: 22.5em;
-  height: 22.5em;
+  width: 20%;
+  height: 20%;
 }
 .content-box.display-normal .content-box-item img {
-  height: 100%;
+  width: 100%;
 }
 .content-box-list.effect-1 .content-box-item {
   opacity: 0;
