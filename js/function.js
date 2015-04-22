@@ -26,12 +26,17 @@ $(function(){
           //closeEffect : 'none',
           nextEffect  : 'none',
           prevEffect  : 'none',
-          padding     : 10,
+          padding     : 5,
           margin      : [20, 60, 20, 60],
           helpers:  {
                 title : {
-                    type : 'inside'
+                    type : 'outside'
                 },
+                buttons : {},
+                // thumbs  : {
+                //   width : 50,
+                //   height  : 50
+                // },
                 overlay : {
                     showEarly : false
                 }

@@ -1,15 +1,29 @@
 @import '../../bootbox/font-awesome-less/font-awesome.less';
-@import '../../bootbox/bootstrap-less/bootstrap.less';
+@import (reference) '../../bootbox/bootstrap-less/bootstrap.less';
 //@import '../../bootbox/bootstrap-less/theme.less';
-@import (reference) '../../bootbox/less/bootbox.less';
+@import '../../bootbox/less/bootbox.less';
 
 
 //@body-bg: #f4f4f4;
 @base-font-size: 62.5%;
 @normal-color: #999;
 
+
+//导航
+@nav-font-size-base: 		18px;
+@nav-height: 				50px;	
+@nav-link-padding-h:   		0px;
+@nav-link-padding-v:   		15px;
+
+*{
+	.box-sizing(border-box);
+}
+
+
 html,body{
 	height: 100%;
+	font-family: @font-family-sans-serif;
+
 }
 .wrapper{
 	.flexbox();
@@ -21,15 +35,58 @@ html,body{
 	height: 50px;
 	.order(1);
 
-	.navbar{
-		margin-bottom: 0; z-index: 99;
-	}
+	// .navbar{
+	// 	margin-bottom: 0; z-index: 99;
+	// }
 	
-	.navbar-brand{
-		font-family:Impact;
-	}
-	
+	// .navbar-brand{
+	// 	font-family:Impact;
+	// }
 
+}
+
+.top-nav{
+	.box-shadow(0 1px 5px rgba(0, 0, 0, 0.5));
+	z-index: 1010;
+	.clearfix();
+	a{
+		text-decoration: none;
+		.transition(all 0.2s ease-out 0.1s);
+	}
+
+	.brand-logo{
+		float: left;
+		height: 50px;
+		font-family:Impact;
+		overflow: hidden;
+	}
+
+	.nav-user{
+		float: right;
+		display: inline;
+		background: @md-pink-400;
+		margin-top: 12px;
+		.border-radius(20px);
+		overflow: hidden;
+		a{
+			float: left;
+			line-height: 35px;
+
+			&:hover,&:focus{
+				background: @md-pink-700;
+			}
+
+			&:first-child{
+				
+				padding-left: 20px;
+			}
+
+			&:last-child{
+			
+				padding-right: 20px;
+			}
+		}
+	}
 }
 
 .content-box-item-animation(@n, @i: 1) when (@i =< @n) {
@@ -153,6 +210,18 @@ html,body{
 			float: left;
 			.size(20%);
 			img{width: 100%;}
+		}
+
+		@media (min-width: 240px) and (max-width: 480px) {
+			.content-box-item{
+				.size(50%);
+			}
+		}
+
+		@media (min-width: 480px) and (max-width: 768px) {
+			.content-box-item{
+				.size(25%);
+			}
 		}
 	}
 
@@ -362,6 +431,7 @@ html,body{
 		top: -100%;
 		right: 15px;
 		color: fade(@white-color, 54%);
+		text-shadow:0 0 10px rgba(0, 0, 0, 0.5);
 		.border-radius(3px);
 		.font-size-rems(12);
 		.transition(all 0.2s ease-out 0.1s);
