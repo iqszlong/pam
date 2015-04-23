@@ -208,22 +208,68 @@ html,body{
 			position: relative;
 			z-index: 1;
 			float: left;
-			.size(20%);
-			img{width: 100%;}
+			//.size(20%);
+			width: ~'calc((100vw - 18px) / 5 )';
+			height:~'calc((100vw - 18px)  / 5 ) ';
+			
+			//img{width: 100%;}
+
+
+
 		}
 
 		@media (min-width: 240px) and (max-width: 480px) {
 			.content-box-item{
-				.size(50%);
+				width: ~'calc((100vw - 18px) / 2)';
+				height:~'calc((100vw - 18px) / 2)';
+				// .size(50%);
 			}
 		}
 
-		@media (min-width: 480px) and (max-width: 768px) {
+		@media (min-width: 481px) and (max-width: 768px) {
 			.content-box-item{
-				.size(25%);
+				width: ~'calc((100vw - 18px) / 3)';
+				height:~'calc((100vw - 18px) / 3)';
+				// .size(25%);
+			}
+		}
+
+		@media (min-width: 769px) and (max-width: 1024px) {
+			.content-box-item{
+				width: ~'calc((100vw - 18px) / 4)';
+				height:~'calc((100vw - 18px) / 4)';
+	
 			}
 		}
 	}
+
+	
+	&.scale-2x3 {
+		.content-box-item{
+			height:~'calc(((100vw - 18px)  / 5 ) / 2 + ((100vw - 18px)  / 5 ))';
+		}
+
+		@media (min-width: 240px) and (max-width: 480px) {
+			.content-box-item{
+				height:~'calc(((100vw - 18px)  / 2 ) / 2 + ((100vw - 18px)  / 2 ))';
+			}
+		}
+
+		@media (min-width: 481px) and (max-width: 768px) {
+			.content-box-item{
+				height:~'calc(((100vw - 18px)  / 3) / 2 + ((100vw - 18px)  / 3 ))';
+			}
+		}
+
+		@media (min-width: 769px) and (max-width: 1024px) {
+			.content-box-item{
+				height:~'calc(((100vw - 18px)  / 4 ) / 2 + ((100vw - 18px)  / 4 ))';
+	
+			}
+		}
+				
+	}
+
 
 
 }
@@ -398,6 +444,7 @@ html,body{
 		//color: @text-color;
 		//font-weight: bold;
 		.font-size-rems(18);
+		//font-size: 1.8vw;
 		.ws_hide();
 		.transition(all 0.2s ease-out 0.1s);
 	}
@@ -409,6 +456,7 @@ html,body{
 		//.ws_hide();
 		.ws_break();
 		.font-size-rems(14);
+		//font-size: 1vw;
 	}
 
 	.item-mask{
@@ -435,6 +483,14 @@ html,body{
 		.border-radius(3px);
 		.font-size-rems(12);
 		.transition(all 0.2s ease-out 0.1s);
+	}
+
+	.item-img{
+		.brimming();
+		background-repeat: no-repeat;
+		background-position: center;
+		.background-size(cover);
+
 	}
 
 }

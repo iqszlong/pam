@@ -3077,22 +3077,43 @@ body {
   position: relative;
   z-index: 1;
   float: left;
-  width: 20%;
-  height: 20%;
-}
-.content-box.display-normal .content-box-item img {
-  width: 100%;
+  width: calc((100vw - 18px) / 5 );
+  height: calc((100vw - 18px)  / 5 ) ;
 }
 @media (min-width: 240px) and (max-width: 480px) {
   .content-box.display-normal .content-box-item {
-    width: 50%;
-    height: 50%;
+    width: calc((100vw - 18px) / 2);
+    height: calc((100vw - 18px) / 2);
   }
 }
-@media (min-width: 480px) and (max-width: 768px) {
+@media (min-width: 481px) and (max-width: 768px) {
   .content-box.display-normal .content-box-item {
-    width: 25%;
-    height: 25%;
+    width: calc((100vw - 18px) / 3);
+    height: calc((100vw - 18px) / 3);
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .content-box.display-normal .content-box-item {
+    width: calc((100vw - 18px) / 4);
+    height: calc((100vw - 18px) / 4);
+  }
+}
+.content-box.scale-2x3 .content-box-item {
+  height: calc(((100vw - 18px)  / 5 ) / 2 + ((100vw - 18px)  / 5 ));
+}
+@media (min-width: 240px) and (max-width: 480px) {
+  .content-box.scale-2x3 .content-box-item {
+    height: calc(((100vw - 18px)  / 2 ) / 2 + ((100vw - 18px)  / 2 ));
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .content-box.scale-2x3 .content-box-item {
+    height: calc(((100vw - 18px)  / 3) / 2 + ((100vw - 18px)  / 3 ));
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .content-box.scale-2x3 .content-box-item {
+    height: calc(((100vw - 18px)  / 4 ) / 2 + ((100vw - 18px)  / 4 ));
   }
 }
 .content-box-list.effect-1 .content-box-item {
@@ -4277,6 +4298,16 @@ body {
   -webkit-transition: all 0.2s ease-out 0.1s;
   -o-transition: all 0.2s ease-out 0.1s;
   transition: all 0.2s ease-out 0.1s;
+}
+.content-box-item .item-img {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 .fancybox-type-iframe .fancybox-inner {
   overflow: hidden !important;
