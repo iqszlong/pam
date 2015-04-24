@@ -54,8 +54,9 @@ $(function(){
 });
 
 (function() {
-  var app = angular.module('webSite', ['ngRoute']).
-    config(['$routeProvider', '$locationProvider', function($routeProvider,$locationProvider) {
+  var app = angular.module('webSite', ['ngRoute']);
+
+  app.config(['$routeProvider', '$locationProvider', function($routeProvider,$locationProvider) {
     $routeProvider.when('/', {
           templateUrl: 'home.htm',
           controller:function(){
@@ -103,36 +104,36 @@ $(function(){
           }
         }).
         otherwise({templateUrl: '404.htm'});
-        $locationProvider.html5Mode(true);
+        //$locationProvider.html5Mode(true);
   }]);
   
 
 
-  app.directive('navBar',function(){
-      return{
-        restrict :'E',
-        templateUrl: "nav-bar.htm",
-        controller:function(){
-          this.navActive = 1;
-          this.selectNav = function(setNav) {
-              this.navActive = setNav;
+  // app.directive('navBar',function(){
+  //     return{
+  //       restrict :'E',
+  //       templateUrl: "nav-bar.htm",
+  //       controller:function(){
+  //         this.navActive = 1;
+  //         this.selectNav = function(setNav) {
+  //             this.navActive = setNav;
 
-          };
-          this.isSelected = function(checkNav){
-            return this.navActive === checkNav;
-          };
-        },
-        controllerAs: 'navSelect'
-      };
-    });
+  //         };
+  //         this.isSelected = function(checkNav){
+  //           return this.navActive === checkNav;
+  //         };
+  //       },
+  //       controllerAs: 'navSelect'
+  //     };
+  //   });
 
 
-  app.directive('footerBar',function(){
-      return{
-        restrict :'E',
-        templateUrl: "footer-bar.htm"
-      };
-  });
+  // app.directive('footerBar',function(){
+  //     return{
+  //       restrict :'E',
+  //       templateUrl: "footer-bar.htm"
+  //     };
+  // });
 
 
   app.directive('contentBoxList', function(){
