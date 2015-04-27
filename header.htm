@@ -14,7 +14,10 @@
     
 
     <ul class="menu pull-right">
-          <li><a href="#"><i class="fa fa-picture-o"></i> 16:9</a></li>
+          <li ng-class='{active : is16x9}' ><a href="javascript:void(0);" ng-click="set16x9()"><i class="fa fa-picture-o"></i> 16:9</a></li>
+          <li ng-class='{active : is4x3}'><a href="javascript:void(0);"  ng-click="set4x3()">4:3</a></li>
+          <li ng-class='{active : is2x3}'><a href="javascript:void(0);"  ng-click="set2x3()">2:3</a></li>
+          <li ng-class='{active : is1x1}'><a href="javascript:void(0);"  ng-click="set1x1()">1:1</a></li>
           <li class="line"></li>
           <li><a href="#"><i class="fa fa-filter"></i></a></li>
           

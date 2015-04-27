@@ -59,9 +59,7 @@ $(function(){
   app.config(['$routeProvider', '$locationProvider', function($routeProvider,$locationProvider) {
     $routeProvider.when('/', {
           templateUrl: 'home.htm',
-          controller:function(){
-             
-          }
+          controller:'homeCtrl'
         }).when('/notice', {
           templateUrl: 'notice.htm',
           controller:function(){
@@ -140,16 +138,18 @@ $(function(){
     return {
       restrict: 'E',
       templateUrl: 'content-box-list.htm',
-      controller:['$http',function($http){
-          var features = this;
-          features.items = [];
-          $http.get('img-list.json').success(function(data){
-              features.items = data;
-          });
-      }],
+      controller: 'imgListCtrl',
       controllerAs: 'img'
     };
   });
+
+  app.controller('imgListCtrl',['$http',function($http){
+      var features = this;
+      features.items = [];
+      $http.get('img-list.json').success(function(data){
+          features.items = data;
+      });
+  }]);
 
   // app.directive('productFeatureMedia', function(){
   //   return {
@@ -178,7 +178,41 @@ $(function(){
   //   };
   // });
 
-
+  app.controller('homeCtrl',['$scope',function($scope){
+      $scope.scaleValue = '1x1';
+      $scope.is16x9 = false;
+      $scope.is4x3 = false;
+      $scope.is2x3 = false;
+      $scope.is1x1 = true;
+      $scope.set16x9 = function(){
+        $scope.scaleValue = '16x9';
+        $scope.is16x9 = true;
+        $scope.is4x3 = false;
+        $scope.is2x3 = false;
+        $scope.is1x1 = false;
+      };
+      $scope.set4x3 = function(){
+        $scope.scaleValue = '4x3';
+        $scope.is4x3 = true;
+        $scope.is16x9 = false;
+        $scope.is2x3 = false;
+        $scope.is1x1 = false;
+      };
+      $scope.set2x3 = function(){
+        $scope.scaleValue = '2x3';
+        $scope.is2x3 = true;
+        $scope.is16x9 = false;
+        $scope.is4x3 = false;
+        $scope.is1x1 = false;
+      };
+      $scope.set1x1 = function(){
+        $scope.scaleValue = '1x1';
+        $scope.is1x1 = true;
+        $scope.is16x9 = false;
+        $scope.is4x3 = false;
+        $scope.is2x3 = false;
+      };
+  }]);
 
 
 
