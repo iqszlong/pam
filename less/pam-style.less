@@ -28,6 +28,61 @@ html,body{
 	font-family: @font-family-sans-serif;
 
 }
+
+.page{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	.transition(all 600ms cubic-bezier(0.77, 0, 0.175, 1));
+	
+
+	&.ng-leave{
+		z-index: 2
+	}
+	&.ng-enter{
+		z-index: 1;
+		
+	}
+}
+.home{
+	
+	&.ng-leave{
+		.scale(1);
+		&.ng-leave-active{
+			.scale(0.8);
+			opacity: 0;
+		}
+	}
+	&.ng-enter{
+		opacity: 0;
+		.scale(0.8);
+		&.ng-enter-active{
+			.scale(1);
+			opacity: 1;
+		}
+	}
+}
+.album{
+	
+	&.ng-leave{
+		.scale(1);
+		&.ng-leave-active{
+			.scale(0.8);
+			opacity: 0;
+		}
+	}
+	&.ng-enter{
+		opacity: 0;
+		.scale(0.8);
+		&.ng-enter-active{
+			.scale(1);
+			opacity: 1;
+		}
+		
+	}
+}
 .wrapper{
 	// .flexbox();
 	// .flex-direction(column);
@@ -114,9 +169,12 @@ html,body{
 }
 
 .content-box-item-animation(@n, @i: 1) when (@i =< @n) {
-  .content-box-item:nth-child(@{i}){
-		.animation-delay( @i * 0.13s);
-  }
+			
+  .content-box-item{
+		&:nth-child(@{i}){
+			.animation-delay( @i * 0.13s);
+		}
+	}
   .content-box-item-animation(@n, (@i + 1));
 }
 
@@ -139,18 +197,53 @@ html,body{
 
 
 .side-nav{
-	width: 200px;
+	width: 240px;
 	//.flex(1);
   	//.order(1);
 	background: @white-color;
 	height: 100%;
 	padding: 15px;
-	display: none;
 	position: fixed;
 	z-index: 10;
 	bottom: 0;
 	top:0;
 	left: 0;
+	
+	color:#333;
+	display:block;
+	z-index:4;
+	transform:translateZ(0);
+	transform-style:preserve-3d;
+	transition-delay:0.1s;
+	transition-duration:0.2s;
+	transition-property:transform;
+	transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
+	transform:translateX(-240px);
+
+	&.show{
+		visibility:visible;
+		transform:translateX(0);
+	}
+
+}
+
+.ui-mask{
+	background-color:rgba(0,0,0,0.5);
+	.brimming();
+	position:fixed;
+	left:0;
+	top:0;
+	z-index:3;
+	opacity:0.1;
+	visibility:hidden;
+	.transition(visibility 0s linear 0.4s,opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1));
+	transform:translateZ(0);
+
+	&.show{
+		opacity:1;
+		visibility:visible;
+		transition-delay:0s;
+	}
 }
 
 .content-box{
@@ -400,13 +493,13 @@ html,body{
 		.content-box-item{
 			opacity: 0;
 			.animation(fadeInUp 0.65s ease forwards);
-
-			// &:nth-child(odd){
-			// 	.animation-duration(0.448279s);
-			// }
+			
+			
 		}
 
 		.content-box-item-animation(35);
+
+
 
 	}
 

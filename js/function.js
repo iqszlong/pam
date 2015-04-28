@@ -44,22 +44,28 @@ $(function(){
       });
 
 
-      Pace.on('hide', function(){
-        console.log('hide');
-        //$('.loading-layer').addClass('hidden');
-        $('.main').removeClass('hidden');
-      });
+     //
+      // Pace.on('hide', function(){
+      //   console.log('hide');
+      //   $('.loading-layer').addClass('hidden');
+      //   $('.main').removeClass('hidden');
+      // });
 
       
 });
 
+
+
 (function() {
-  var app = angular.module('webSite', ['ngRoute']);
+  var app = angular.module('webSite', ['ngRoute','ngAnimate','webSiteCtrl']);
 
   app.config(['$routeProvider', '$locationProvider', function($routeProvider,$locationProvider) {
     $routeProvider.when('/', {
           templateUrl: 'home.htm',
           controller:'homeCtrl'
+        }).when('/album', {
+          templateUrl: 'album.htm',
+          controller:'albumCtrl'
         }).when('/notice', {
           templateUrl: 'notice.htm',
           controller:function(){
@@ -102,7 +108,8 @@ $(function(){
           }
         }).
         otherwise({templateUrl: '404.htm'});
-        //$locationProvider.html5Mode(true);
+        // $locationProvider.html5Mode(true);
+        // $locationProvider.hashPrefix('!');
   }]);
   
 
@@ -178,12 +185,24 @@ $(function(){
   //   };
   // });
 
-  app.controller('homeCtrl',['$scope',function($scope){
+  
+
+  
+  
+
+
+
+  var common = angular.module('webSiteCtrl',[]);
+
+  common.controller('homeCtrl',['$scope',function($scope){
+    $scope.pageClass='home';
       $scope.scaleValue = '1x1';
       $scope.is16x9 = false;
       $scope.is4x3 = false;
       $scope.is2x3 = false;
       $scope.is1x1 = true;
+
+
       $scope.set16x9 = function(){
         $scope.scaleValue = '16x9';
         $scope.is16x9 = true;
@@ -212,8 +231,22 @@ $(function(){
         $scope.is4x3 = false;
         $scope.is2x3 = false;
       };
+
+      $scope.sideNavToggle = function(){
+        if($scope.sideisVisible){
+          $scope.sideisVisible = false;
+        }else{
+          $scope.sideisVisible = true;
+        }
+        
+      }
+     
+
   }]);
 
-
+  common.controller('albumCtrl',['$scope',function($scope){
+    $scope.pageClass='album';
+      
+  }]);
 
 })();
