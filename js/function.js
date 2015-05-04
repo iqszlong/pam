@@ -150,13 +150,17 @@ $(function(){
     };
   });
 
-  app.controller('imgListCtrl',['$http',function($http){
-      var features = this;
-      features.items = [];
-      $http.get('img-list.json').success(function(data){
-          features.items = data;
-      });
-  }]);
+
+  app.directive('albumList', function(){
+    return {
+      restrict: 'E',
+      templateUrl: 'album-list.htm',
+      controller: 'albumListCtrl',
+      controllerAs: 'album'
+    };
+  });
+
+  
 
   // app.directive('productFeatureMedia', function(){
   //   return {
@@ -192,16 +196,32 @@ $(function(){
 
 
 
-  var common = angular.module('webSiteCtrl',[]);
+  var webSiteCtrl = angular.module('webSiteCtrl',[]);
 
-  common.controller('homeCtrl',['$scope',function($scope){
+  webSiteCtrl.controller('imgListCtrl',['$http',function($http){
+      var features = this;
+      features.items = [];
+      $http.get('img-list.json').success(function(data){
+          features.items = data;
+      });
+  }]);
+
+  webSiteCtrl.controller('albumListCtrl',['$http',function($http){
+      var features = this;
+      features.items = [];
+      $http.get('album-list.json').success(function(data){
+          features.items = data;
+      });
+  }]);
+
+  webSiteCtrl.controller('homeCtrl',['$scope',function($scope){
     $scope.pageClass='home';
       $scope.scaleValue = '1x1';
       $scope.is16x9 = false;
       $scope.is4x3 = false;
       $scope.is2x3 = false;
       $scope.is1x1 = true;
-
+      $scope.sideisVisible =false;
 
       $scope.set16x9 = function(){
         $scope.scaleValue = '16x9';
@@ -238,15 +258,63 @@ $(function(){
         }else{
           $scope.sideisVisible = true;
         }
-        
-      }
+      };
      
 
   }]);
 
-  common.controller('albumCtrl',['$scope',function($scope){
+  webSiteCtrl.controller('albumCtrl',['$scope',function($scope){
     $scope.pageClass='album';
+    $scope.scaleValue = '2x3';
+      $scope.is16x9 = false;
+      $scope.is4x3 = false;
+      $scope.is2x3 = true;
+      $scope.is1x1 = false;
+      $scope.sideisVisible =false;
+
+
+    $scope.set16x9 = function(){
+        $scope.scaleValue = '16x9';
+        $scope.is16x9 = true;
+        $scope.is4x3 = false;
+        $scope.is2x3 = false;
+        $scope.is1x1 = false;
+      };
+      $scope.set4x3 = function(){
+        $scope.scaleValue = '4x3';
+        $scope.is4x3 = true;
+        $scope.is16x9 = false;
+        $scope.is2x3 = false;
+        $scope.is1x1 = false;
+      };
+      $scope.set2x3 = function(){
+        $scope.scaleValue = '2x3';
+        $scope.is2x3 = true;
+        $scope.is16x9 = false;
+        $scope.is4x3 = false;
+        $scope.is1x1 = false;
+      };
+      $scope.set1x1 = function(){
+        $scope.scaleValue = '1x1';
+        $scope.is1x1 = true;
+        $scope.is16x9 = false;
+        $scope.is4x3 = false;
+        $scope.is2x3 = false;
+      };
+      
+    $scope.sideNavToggle = function(){
+      if($scope.sideisVisible){
+        $scope.sideisVisible = false;
+      }else{
+        $scope.sideisVisible = true;
+      }
+    };
       
   }]);
+
+
+  
+  
+
 
 })();
