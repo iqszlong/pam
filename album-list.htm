@@ -1,0 +1,32 @@
+<div class="content-box-list effect-3">
+  <div class="content-box-item" ng-repeat="imgitem in album.items">
+
+      <a ng-if="imgitem.type == 'picture'" class="fancybox" rel="group" href="{{imgitem.images.full}}" title="{{imgitem.title}}" target="_blank">
+        <div class="item-img" style="background-image:url({{imgitem.images.middle}});"></div>
+        <div class="item-mask"></div>
+        <div class="item-stuts">{{imgitem.resolution}}</div>
+          <div class="item-content">
+            <h2 class="item-title">
+              <i class="fa fa-picture-o"></i>
+              {{imgitem.title}}
+            </h2>
+            <div class="item-desc">{{imgitem.desc}}</div>
+          </div>
+      </a>
+
+      <a ng-if="imgitem.type == 'video'" class="fancybox fancybox.iframe" rel="group" href="{{imgitem.externalLink}}" title="{{imgitem.title}}" target="_blank">
+        <div class="item-img" style="background-image:url({{imgitem.images.middle}});"></div>
+          <div class="item-mask"><i class="fa fa-play-circle-o"></i></div>
+          <div class="item-stuts">{{imgitem.resolution}}</div>
+          <div class="item-content">
+          	<h2 class="item-title">
+              <i class="fa fa-video-camera"></i>
+              {{imgitem.title}}
+            </h2>
+          	<div class="item-desc">{{imgitem.desc}}</div>
+          </div>
+      </a>
+
+  </div>
+</div>
+

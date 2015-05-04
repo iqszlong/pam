@@ -5,12 +5,15 @@
 
 	<div class="main ">
 
-		<ng-include src="'side-nav.htm'" ng-init="" class="side-nav"></ng-include>
+		<ng-include src="'side-nav.htm'" ng-init="" class="side-nav" ng-class="{show : sideisVisible}"></ng-include>
 		
-		<p>这个是列表</p>
-		
+		<div class="content-box display-normal scale-{{scaleValue}}">
+
+			<album-list></album-list>
+
+		</div>
 	</div>
 	<!-- /.main -->
-	
+	<div class="ui-mask" ng-class="{show : sideisVisible}" ng-click="sideNavToggle()"></div>
 </div>
 <!-- /.wrapper -->

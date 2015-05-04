@@ -57,60 +57,93 @@ $(function(){
 
 
 (function() {
-  var app = angular.module('webSite', ['ngRoute','ngAnimate','webSiteCtrl']);
 
-  app.config(['$routeProvider', '$locationProvider', function($routeProvider,$locationProvider) {
-    $routeProvider.when('/', {
-          templateUrl: 'home.htm',
-          controller:'homeCtrl'
-        }).when('/album', {
-          templateUrl: 'album.htm',
-          controller:'albumCtrl'
-        }).when('/notice', {
-          templateUrl: 'notice.htm',
-          controller:function(){
+  var app = angular.module('webSite', ['ui.router','ngAnimate','webSiteCtrl']);
+
+  app.config(function($stateProvider, $urlRouterProvider) {
+    $urlRouterProvider.otherwise('/404');
+    $stateProvider
+        .state('index', {
+            url: '/index',
+            views: {
+                '': {
+                    templateUrl: 'home.htm',
+                    controller:'homeCtrl'
+                }
+            }
+        })
+        .state('album', {
+            url: '/album',
+            views: {
+                '': {
+                    templateUrl: 'album.htm',
+                    controller:'albumCtrl'
+                }
+            }
+        })
+        .state('404', {
+            url: '/404',
+            views: {
+                '': {
+                    templateUrl: '404.htm'
+                }
+            }
+        })
+  })
+
+  // var app = angular.module('webSite', ['ngRoute','ngAnimate','webSiteCtrl']);
+
+  // app.config(['$routeProvider', '$locationProvider', function($routeProvider,$locationProvider) {
+  //   $routeProvider.when('/', {
+  //         templateUrl: 'home.htm',
+  //         controller:'homeCtrl'
+  //       }).when('/album', {
+  //         templateUrl: 'album.htm',
+  //         controller:'albumCtrl'
+  //       }).when('/notice', {
+  //         templateUrl: 'notice.htm',
+  //         controller:function(){
            
-          }
-        }).when('/notice/:id', {
-          templateUrl: 'notice_detail.htm',
-          controller:function($scope, $routeParams){
+  //         }
+  //       }).when('/notice/:id', {
+  //         templateUrl: 'notice_detail.htm',
+  //         controller:function($scope, $routeParams){
             
-             $scope.id = $routeParams.id;
-          }
-        }).when('/download', {
-          templateUrl: 'download.htm',
-          controller:function(){
+  //            $scope.id = $routeParams.id;
+  //         }
+  //       }).when('/download', {
+  //         templateUrl: 'download.htm',
+  //         controller:function(){
             
-          }
-        }).when('/log', {
-          templateUrl: 'log.htm',
-          controller:function(){
+  //         }
+  //       }).when('/log', {
+  //         templateUrl: 'log.htm',
+  //         controller:function(){
             
-          }
-        }).when('/demo', {
-          controller:function(){
+  //         }
+  //       }).when('/demo', {
+  //         controller:function(){
            
-          }
-        }).when('/service', {
-          templateUrl: 'service.htm',
-          controller:function(){
+  //         }
+  //       }).when('/service', {
+  //         templateUrl: 'service.htm',
+  //         controller:function(){
             
-          }
-        }).when('/apps', {
-          templateUrl: 'apps.htm',
-          controller:function(){
+  //         }
+  //       }).when('/apps', {
+  //         templateUrl: 'apps.htm',
+  //         controller:function(){
            
-          }
-        }).when('/appreciation', {
-          templateUrl: 'appreciation.htm',
-          controller:function(){
+  //         }
+  //       }).when('/appreciation', {
+  //         templateUrl: 'appreciation.htm',
+  //         controller:function(){
            
-          }
-        }).
-        otherwise({templateUrl: '404.htm'});
-        // $locationProvider.html5Mode(true);
-        // $locationProvider.hashPrefix('!');
-  }]);
+  //         }
+  //       }).otherwise({templateUrl: '404.htm'});
+  //       // $locationProvider.html5Mode(true);
+  //       // $locationProvider.hashPrefix('!');
+  // }]);
   
 
 
@@ -209,7 +242,7 @@ $(function(){
   webSiteCtrl.controller('albumListCtrl',['$http',function($http){
       var features = this;
       features.items = [];
-      $http.get('album-list.json').success(function(data){
+      $http.get('ztzj.json').success(function(data){
           features.items = data;
       });
   }]);
@@ -253,11 +286,7 @@ $(function(){
       };
 
       $scope.sideNavToggle = function(){
-        if($scope.sideisVisible){
-          $scope.sideisVisible = false;
-        }else{
-          $scope.sideisVisible = true;
-        }
+        $scope.sideisVisible = !$scope.sideisVisible;
       };
      
 
@@ -303,11 +332,7 @@ $(function(){
       };
       
     $scope.sideNavToggle = function(){
-      if($scope.sideisVisible){
-        $scope.sideisVisible = false;
-      }else{
-        $scope.sideisVisible = true;
-      }
+      $scope.sideisVisible = !$scope.sideisVisible;
     };
       
   }]);
