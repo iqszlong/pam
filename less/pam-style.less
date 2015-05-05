@@ -212,18 +212,14 @@ html,body{
 	color:#333;
 	display:block;
 	z-index:4;
-	transform:translateZ(0);
-	transform-style:preserve-3d;
-	transition-delay:0.1s;
-	transition-duration:0.2s;
-	transition-property:transform box-shadow;
-	transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
-	transform:translateX(-320px);
+	.transform-style();
+	.transition(transform 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.1s,box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.1s);
+	.translate(-320px,0);
 	visibility: hidden;
 
 	&.show{
 		visibility:visible;
-		transform:translateX(0);
+		.translate(0,0);
 		box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
 	}
 
@@ -346,8 +342,8 @@ html,body{
 			z-index: 1;
 			float: left;
 			//.size(20%);
-			width: ~'calc((100vw - 17px) / 5 )';
-			height:~'calc((100vw - 17px)  / 5 ) ';
+			width: calc(~'(100vw - 17px) / 5 ');
+			height:calc(~'(100vw - 17px)  / 5 ') ;
 			.transition(width 0.2s ease-out 0.1s,height 0.2s ease-out 0.1s);
 			//img{width: 100%;}
 
@@ -357,24 +353,24 @@ html,body{
 
 		@media (min-width: 240px) and (max-width: 480px) {
 			.content-box-item{
-				width: ~'calc(100vw / 2)';
-				height:~'calc(100vw / 2)';
+				width: calc(~'100vw / 2');
+				height:calc(~'100vw / 2');
 				
 			}
 		}
 
 		@media (min-width: 481px) and (max-width: 768px) {
 			.content-box-item{
-				width: ~'calc((100vw - 17px) / 3)';
-				height:~'calc((100vw - 17px) / 3)';
+				width: calc(~'(100vw - 17px) / 3');
+				height:calc(~'(100vw - 17px) / 3');
 		
 			}
 		}
 
 		@media (min-width: 769px) and (max-width: 1024px) {
 			.content-box-item{
-				width: ~'calc((100vw - 17px) / 4)';
-				height:~'calc((100vw - 17px) / 4)';
+				width: calc(~'(100vw - 17px) / 4');
+				height:calc(~'(100vw - 17px) / 4');
 	
 			}
 		}
@@ -383,24 +379,24 @@ html,body{
 	
 	&.scale-2x3 {
 		.content-box-item{
-			height:~'calc(((100vw - 17px)  / 5 ) / 2 + ((100vw - 17px)  / 5 ))';
+			height:calc(~'((100vw - 17px)  / 5 ) / 2 + ((100vw - 17px)  / 5 )');
 		}
 
 		@media (min-width: 240px) and (max-width: 480px) {
 			.content-box-item{
-				height:~'calc((100vw / 2 ) / 2 + (100vw / 2 ))';
+				height:calc(~'(100vw / 2 ) / 2 + (100vw / 2 )');
 			}
 		}
 
 		@media (min-width: 481px) and (max-width: 768px) {
 			.content-box-item{
-				height:~'calc(((100vw - 17px)  / 3) / 2 + ((100vw - 17px)  / 3 ))';
+				height:calc(~'((100vw - 17px)  / 3) / 2 + ((100vw - 17px)  / 3 )');
 			}
 		}
 
 		@media (min-width: 769px) and (max-width: 1024px) {
 			.content-box-item{
-				height:~'calc(((100vw - 17px)  / 4 ) / 2 + ((100vw - 17px)  / 4 ))';
+				height:calc(~'((100vw - 17px)  / 4 ) / 2 + ((100vw - 17px)  / 4 )');
 	
 			}
 		}
@@ -410,24 +406,24 @@ html,body{
 
 	&.scale-4x3 {
 		.content-box-item{
-			height:~'calc(((100vw - 17px) / 5 ) - ((100vw - 17px)  / 5 ) / 4) ';
+			height:calc(~'((100vw - 17px) / 5 ) - ((100vw - 17px)  / 5 ) / 4');
 		}
 
 		@media (min-width: 240px) and (max-width: 480px) {
 			.content-box-item{
-				height:~'calc((100vw / 2 ) - (100vw / 2 ) / 4) ';
+				height:calc(~'(100vw / 2 ) - (100vw / 2 ) / 4');
 			}
 		}
 
 		@media (min-width: 481px) and (max-width: 768px) {
 			.content-box-item{
-				height:~'calc(((100vw - 17px)  / 3) - ((100vw - 17px)  / 3 ) / 4) ';
+				height:calc(~'((100vw - 17px)  / 3) - ((100vw - 17px)  / 3 ) / 4');
 			}
 		}
 
 		@media (min-width: 769px) and (max-width: 1024px) {
 			.content-box-item{
-				height:~'calc(((100vw - 17px)  / 4 ) - ((100vw - 17px)  / 4 ) / 4) ';
+				height:calc(~'((100vw - 17px)  / 4 ) - ((100vw - 17px)  / 4 ) / 4');
 	
 			}
 		}
@@ -436,24 +432,24 @@ html,body{
 
 	&.scale-16x9 {
 		.content-box-item{
-			height:~'calc(((100vw - 17px) / 5 ) - (((100vw - 17px)  / 5 ) * 7) / 16) ';
+			height:calc(~'((100vw - 17px) / 5 ) - (((100vw - 17px)  / 5 ) * 7) / 16');
 		}
 
 		@media (min-width: 240px) and (max-width: 480px) {
 			.content-box-item{
-				height:~'calc((100vw / 2 ) - ((100vw / 2 ) * 7) / 16) ';
+				height:calc(~'(100vw / 2 ) - ((100vw / 2 ) * 7) / 16');
 			}
 		}
 
 		@media (min-width: 481px) and (max-width: 768px) {
 			.content-box-item{
-				height:~'calc(((100vw - 17px)  / 3) - (((100vw - 17px)  / 3 ) * 7) / 16) ';
+				height:calc(~'((100vw - 17px)  / 3) - (((100vw - 17px)  / 3 ) * 7) / 16');
 			}
 		}
 
 		@media (min-width: 769px) and (max-width: 1024px) {
 			.content-box-item{
-				height:~'calc(((100vw - 17px)  / 4 ) - (((100vw - 17px)  / 4 ) * 7) / 16) ';
+				height:calc(~'((100vw - 17px)  / 4 ) - (((100vw - 17px)  / 4 ) * 7) / 16');
 	
 			}
 		}
