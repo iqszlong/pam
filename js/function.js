@@ -62,6 +62,7 @@ $(function(){
 
   app.config(function($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/404');
+    $urlRouterProvider.when('', '/index');
     $stateProvider
         .state('index', {
             url: '/index',
