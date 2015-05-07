@@ -45,11 +45,11 @@ $(function(){
 
 
      //
-      // Pace.on('hide', function(){
-      //   console.log('hide');
-      //   $('.loading-layer').addClass('hidden');
-      //   $('.main').removeClass('hidden');
-      // });
+      Pace.on('hide', function(){
+        console.log('hide');
+        //$('.loading-layer').addClass('hidden');
+        $('.content-box').removeClass('hidden');
+      });
 
       
 });
@@ -256,38 +256,62 @@ $(function(){
       $scope.is2x3 = false;
       $scope.is1x1 = true;
       $scope.sideisVisible =false;
+      $scope.positionValue = "cover";
+      $scope.isCover = true;
 
-      $scope.set16x9 = function(){
-        $scope.scaleValue = '16x9';
-        $scope.is16x9 = true;
-        $scope.is4x3 = false;
-        $scope.is2x3 = false;
-        $scope.is1x1 = false;
-      };
-      $scope.set4x3 = function(){
-        $scope.scaleValue = '4x3';
-        $scope.is4x3 = true;
-        $scope.is16x9 = false;
-        $scope.is2x3 = false;
-        $scope.is1x1 = false;
-      };
-      $scope.set2x3 = function(){
-        $scope.scaleValue = '2x3';
-        $scope.is2x3 = true;
-        $scope.is16x9 = false;
-        $scope.is4x3 = false;
-        $scope.is1x1 = false;
-      };
-      $scope.set1x1 = function(){
-        $scope.scaleValue = '1x1';
-        $scope.is1x1 = true;
-        $scope.is16x9 = false;
-        $scope.is4x3 = false;
-        $scope.is2x3 = false;
-      };
+      //
+      $scope.setScale = function(scale){
+        $scope.scaleValue = scale;
+        switch(scale){
+          case '16x9':
+            $scope.is16x9 = true;
+            $scope.is4x3 = false;
+            $scope.is2x3 = false;
+            $scope.is1x1 = false;
+            break;
+          case '4x3': 
+            $scope.is4x3 = true;
+            $scope.is16x9 = false;
+            $scope.is2x3 = false;
+            $scope.is1x1 = false;
+            break;
+          case '2x3': 
+            $scope.is2x3 = true;
+            $scope.is16x9 = false;
+            $scope.is4x3 = false;
+            $scope.is1x1 = false;
+            break;
+          case '1x1': 
+            $scope.is1x1 = true;
+            $scope.is16x9 = false;
+            $scope.is4x3 = false;
+            $scope.is2x3 = false;
+            break; 
+        }
+    };
+
+      //
+      $scope.setPosition = function(position){
+        //console.log(position);
+        $scope.positionValue = position;
+        if (position == 'cover'){
+          $scope.isCover = true;
+          $scope.isContain = false;
+        }else{
+          $scope.isCover = false;
+          $scope.isContain = true;
+        }
+        
+      }
+
+
 
       $scope.sideNavToggle = function(){
         $scope.sideisVisible = !$scope.sideisVisible;
+      };
+
+      $scope.rightNavToggle = function(){
+        $scope.rightisVisible = !$scope.rightisVisible;
       };
      
 
@@ -301,40 +325,63 @@ $(function(){
       $scope.is2x3 = true;
       $scope.is1x1 = false;
       $scope.sideisVisible =false;
+      $scope.positionValue = "cover";
+      $scope.isCover = true;
 
 
-    $scope.set16x9 = function(){
-        $scope.scaleValue = '16x9';
-        $scope.is16x9 = true;
-        $scope.is4x3 = false;
-        $scope.is2x3 = false;
-        $scope.is1x1 = false;
-      };
-      $scope.set4x3 = function(){
-        $scope.scaleValue = '4x3';
-        $scope.is4x3 = true;
-        $scope.is16x9 = false;
-        $scope.is2x3 = false;
-        $scope.is1x1 = false;
-      };
-      $scope.set2x3 = function(){
-        $scope.scaleValue = '2x3';
-        $scope.is2x3 = true;
-        $scope.is16x9 = false;
-        $scope.is4x3 = false;
-        $scope.is1x1 = false;
-      };
-      $scope.set1x1 = function(){
-        $scope.scaleValue = '1x1';
-        $scope.is1x1 = true;
-        $scope.is16x9 = false;
-        $scope.is4x3 = false;
-        $scope.is2x3 = false;
-      };
+    $scope.setScale = function(scale){
+        $scope.scaleValue = scale;
+        switch(scale){
+          case '16x9':
+            $scope.is16x9 = true;
+            $scope.is4x3 = false;
+            $scope.is2x3 = false;
+            $scope.is1x1 = false;
+            break;
+          case '4x3': 
+            $scope.is4x3 = true;
+            $scope.is16x9 = false;
+            $scope.is2x3 = false;
+            $scope.is1x1 = false;
+            break;
+          case '2x3': 
+            $scope.is2x3 = true;
+            $scope.is16x9 = false;
+            $scope.is4x3 = false;
+            $scope.is1x1 = false;
+            break;
+          case '1x1': 
+            $scope.is1x1 = true;
+            $scope.is16x9 = false;
+            $scope.is4x3 = false;
+            $scope.is2x3 = false;
+            break; 
+        }
+    };
+     
+
+
+      //
+      $scope.setPosition = function(position){
+        //console.log(position);
+        $scope.positionValue = position;
+        if (position == 'cover'){
+          $scope.isCover = true;
+          $scope.isContain = false;
+        }else{
+          $scope.isCover = false;
+          $scope.isContain = true;
+        }
+        
+      }
       
     $scope.sideNavToggle = function(){
       $scope.sideisVisible = !$scope.sideisVisible;
     };
+
+    $scope.rightNavToggle = function(){
+        $scope.rightisVisible = !$scope.rightisVisible;
+      };
       
   }]);
 
