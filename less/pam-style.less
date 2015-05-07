@@ -273,12 +273,23 @@ html,body{
 .side-nav-header{
 	width: 240px;
 	height: (240*9)/16px;
-	background: @md-blue-500;
+	background: @white-color;
 	padding: 16px;
+	border-bottom: 1px solid @solid-color;
+	
 
-	// img{
-	// 	.img-responsive();
-	// }
+	.avatar{
+		.size(64px);
+
+	}
+	.avatar-img{
+		.brimming();
+		.border-radius(50%);
+		.background-size(cover);
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
 }
 .side-menu{
 	
@@ -317,7 +328,6 @@ html,body{
 .side-menu-header{
 	padding: 10px;
 	font-size: 12px;
-
 }
 
 
@@ -759,8 +769,8 @@ html,body{
 		//color: @normal-color;
 		color: fade(@white-color, 87%);
 		display: block;
-		//.ws_hide();
-		.ws_break();
+		.ws_hide();
+		//.ws_break();
 		.font-size-rems(14);
 		//font-size: 1vw;
 	}

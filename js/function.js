@@ -52,6 +52,14 @@ $(function(){
       });
 
       
+      _500px.init({
+        sdk_key: 'a51bae00a674aa2c7f9dcbf2fb783c602a2ea6e3'
+      });
+
+      
+
+
+
 });
 
 
@@ -235,9 +243,19 @@ $(function(){
   webSiteCtrl.controller('imgListCtrl',['$http',function($http){
       var features = this;
       features.items = [];
-      $http.get('img-list.json').success(function(data){
-          features.items = data;
+       var photos;
+      _500px.api('/photos', { feature: 'editors',rpp: 35 ,image_size: 3}, function (res) {
+        if(res.success) {
+          photos = res.data.photos;
+          console.log(photos);
+          features.items = photos;
+        }
       });
+      
+      // $http.get('img-list.json').success(function(data){
+      //   console.log(data);
+      //     features.items = data;
+      // });
   }]);
 
   webSiteCtrl.controller('albumListCtrl',['$http',function($http){
