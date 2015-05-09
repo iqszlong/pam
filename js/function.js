@@ -243,18 +243,18 @@ $(function(){
   webSiteCtrl.controller('imgListCtrl',['$http',function($http){
       var features = this;
       features.items = [];
-      _500px.api('/photos', { feature: 'editors',only: 'Nature',rpp: 35 ,image_size: 3}, function (res) {
-        if(res.success) {
-          var photos = res.data.photos;
-          console.log(photos);
-          features.items = photos;
-        }
-      });
-      
-      // $http.get('http://7xim8a.com1.z0.glb.clouddn.com/json/img-list.json').success(function(data){
-      //   console.log(data);
-      //     features.items = data;
+      // _500px.api('/photos', { feature: 'editors',only: 'Nature',rpp: 35 ,image_size: 3}, function (res) {
+      //   if(res.success) {
+      //     var photos = res.data.photos;
+      //     console.log(photos);
+      //     features.items = photos;
+      //   }
       // });
+      
+      $http.get('http://7xim8a.com1.z0.glb.clouddn.com/json/img-list.json').success(function(data){
+        console.log(data);
+          features.items = data;
+      });
   }]);
 
   webSiteCtrl.controller('albumListCtrl',['$http',function($http){

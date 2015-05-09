@@ -474,7 +474,7 @@ html,body{
 			//.size(20%);
 			width: calc(~'(100vw - 17px) / 5 ');
 			height:calc(~'(100vw - 17px)  / 5 ') ;
-			.transition(width 0.2s ease-out 0.1s,height 0.2s ease-out 0.1s);
+			.transition(width 0s ease-out 0.1s,height 0.2s ease-out 0.1s);
 			//img{width: 100%;}
 
 
@@ -502,6 +502,13 @@ html,body{
 				width: calc(~'(100vw - 17px) / 4');
 				height:calc(~'(100vw - 17px) / 4');
 	
+			}
+		}
+
+		@media (min-width: 1200px){
+			.content-box-item{
+				width: calc(~'(100vw - 17px - 240px) / 5 ');
+				height:calc(~'(100vw - 17px - 240px) / 5 ') ;
 			}
 		}
 	}
