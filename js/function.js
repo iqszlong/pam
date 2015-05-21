@@ -24,9 +24,9 @@ $(function(){
       $(".fancybox").fancybox({
           //openEffect  : 'none',
           //closeEffect : 'none',
-          nextEffect  : 'none',
-          prevEffect  : 'none',
-          padding     : 5,
+          //nextEffect  : 'none',
+          //prevEffect  : 'none',
+          padding     : 0,
           margin      : [20, 60, 20, 60],
           helpers:  {
                 title : {
@@ -240,19 +240,25 @@ $(function(){
 
   var webSiteCtrl = angular.module('webSiteCtrl',[]);
 
-  webSiteCtrl.controller('imgListCtrl',['$http',function($http){
+  webSiteCtrl.controller('imgListCtrl',['$http','$scope',function($http,$scope){
       var features = this;
       features.items = [];
+      
+      
+      
       // _500px.api('/photos', { feature: 'editors',only: 'Nature',rpp: 35 ,image_size: 3}, function (res) {
       //   if(res.success) {
-      //     var photos = res.data.photos;
-      //     console.log(photos);
-      //     features.items = photos;
+      //     $scopephotos = res.data.photos;
+      //     console.log($scope.photos);
+      //     features.items = $scope.photos;
       //   }
       // });
       
+        
+     
+      
       $http.get('http://7xim8a.com1.z0.glb.clouddn.com/json/img-list.json').success(function(data){
-        console.log(data);
+        //console.log(data);
           features.items = data;
       });
   }]);
