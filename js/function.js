@@ -52,9 +52,7 @@ $(function(){
       });
 
       
-      _500px.init({
-        sdk_key: 'a51bae00a674aa2c7f9dcbf2fb783c602a2ea6e3'
-      });
+      
 
       
 
@@ -240,27 +238,34 @@ $(function(){
 
   var webSiteCtrl = angular.module('webSiteCtrl',[]);
 
-  webSiteCtrl.controller('imgListCtrl',['$http','$scope',function($http,$scope){
-      var features = this;
+  webSiteCtrl.controller('imgListCtrl',['$http','$scope','$timeout',function($http,$scope,$timeout){
+      var features = this,timeout;
       features.items = [];
       
-      
-      
-      // _500px.api('/photos', { feature: 'editors',only: 'Nature',rpp: 35 ,image_size: 3}, function (res) {
-      //   if(res.success) {
-      //     $scopephotos = res.data.photos;
-      //     console.log($scope.photos);
-      //     features.items = $scope.photos;
-      //   }
-      // });
-      
-        
-     
-      
-      $http.get('http://7xim8a.com1.z0.glb.clouddn.com/json/img-list.json').success(function(data){
-        //console.log(data);
-          features.items = data;
+      _500px.init({
+          sdk_key: 'a51bae00a674aa2c7f9dcbf2fb783c602a2ea6e3'
+        });
+      _500px.api('/photos', { feature: 'editors',only: 'Nature',rpp: 35 ,image_size: 3}, function (res) {
+        if(res.success) {
+          photos = res.data.photos;
+          if (timeout) {
+            $timeout.cancel(timeout);
+          }
+          timeout = $timeout(function() {
+              console.log(photos);
+              features.items =  photos;
+          }, 350);
+        }
       });
+        
+
+      
+      
+      
+      // $http.get('http://7xim8a.com1.z0.glb.clouddn.com/json/img-list.json').success(function(data){
+      //   //console.log(data);
+      //     features.items = data;
+      // });
   }]);
 
   webSiteCtrl.controller('albumListCtrl',['$http',function($http){
@@ -282,6 +287,7 @@ $(function(){
       $scope.positionValue = "cover";
       $scope.isCover = true;
 
+      
       //
       $scope.setScale = function(scale){
         $scope.scaleValue = scale;
@@ -335,7 +341,8 @@ $(function(){
 
       $scope.rightNavToggle = function(){
         $scope.rightisVisible = !$scope.rightisVisible;
-      };
+      }
+     
      
 
   }]);
@@ -409,7 +416,27 @@ $(function(){
   }]);
 
 
-  
+  // webSiteCtrl.factory('service', function() {
+
+  //   var doRequest = function(){
+  //       _500px.init({
+  //         sdk_key: 'a51bae00a674aa2c7f9dcbf2fb783c602a2ea6e3'
+  //       });
+  //       _500px.api('/photos', { feature: 'editors',only: 'Nature',rpp: 35 ,image_size: 3}, function (res) {
+  //         if(res.success) {
+  //           photos = res.data.photos;
+  //           console.log(photos);
+  //           return photos;
+  //         }
+  //       });
+  //   }
+  //   return {
+  //       photoList: function() {
+  //           return doRequest();
+  //       }
+  //   };
+      
+  // });
   
 
 
