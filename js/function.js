@@ -245,7 +245,7 @@ $(function(){
       _500px.init({
           sdk_key: 'a51bae00a674aa2c7f9dcbf2fb783c602a2ea6e3'
         });
-      _500px.api('/photos', { feature: 'editors',only: 'Nature',rpp: 35 ,image_size: 3}, function (res) {
+      _500px.api('/photos', { feature: 'popular',only: 'Uncategorized',rpp: 35 ,image_size: 3}, function (res) {
         if(res.success) {
           photos = res.data.photos;
           if (timeout) {
