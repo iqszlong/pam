@@ -18,6 +18,12 @@
   object-position: 50% 50%;
 }
 
+.item .ctrl{
+  position: absolute;
+  right: 0;
+  top:0;
+}
+
 @media screen and (max-width:640px) {
   .layout{
     grid-template-columns: repeat(2,1fr);
