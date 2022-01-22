@@ -2,13 +2,12 @@ import Index from '..';
 import renderer from 'react-test-renderer';
 
 
+
 describe('Page: index', () => {
-  it('Render correctly', () => {
+  it('html节点嵌套测试', () => {
     const wrapper = renderer.create(<Index />);
-    expect(wrapper.root.children.length).toBe(1);
+    expect(wrapper.root.children.length).toBe(2);
     const outerLayer = wrapper.root.children[0];
-    expect(outerLayer.type).toBe('div');
-    expect(outerLayer.children.length).toBe(2);
-    
+    expect(outerLayer.children.length).toBe(1);
   });
 });

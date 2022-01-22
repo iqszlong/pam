@@ -4,6 +4,7 @@
     "start": "umi dev",
     "build": "umi build",
     "test": "umi test",
+    "coverage": "umi test --coverage",
     "lint": "eslint {src,mock,tests}/**/*.{js,jsx} --fix",
     "precommit": "lint-staged"
   },
