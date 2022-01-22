@@ -3,10 +3,12 @@
   "scripts": {
     "start": "umi dev",
     "build": "umi build",
+    "umi ui":"umi ui",
     "test": "umi test",
     "coverage": "umi test --coverage",
     "lint": "eslint {src,mock,tests}/**/*.{js,jsx} --fix",
     "precommit": "lint-staged"
+    
   },
   "dependencies": {
     "@ant-design/icons": "^4.7.0",

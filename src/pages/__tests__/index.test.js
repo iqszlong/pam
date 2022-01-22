@@ -11,3 +11,17 @@ describe('Page: index', () => {
     expect(outerLayer.children.length).toBe(1);
   });
 });
+
+
+describe('简单测试', () => {
+  function hasError() {
+    throw new Error('错误');
+  }
+
+  test('验证抛出错误', () => {
+    expect(()=>hasError()).toThrow(); //函数是否抛出错误
+    expect(()=>hasError()).toThrow('错误'); //函数是否抛出相同的错误提示
+    expect(()=>hasError()).toThrow(/错/); // 错误提示是否匹配到 ‘错’
+  });
+
+});
