@@ -14,14 +14,34 @@ describe('Page: index', () => {
 
 
 describe('简单测试', () => {
-  function hasError() {
-    throw new Error('错误');
+
+  function sleep(delay) {
+    var start = (new Date()).getTime();
+    while ((new Date()).getTime() - start < delay) {
+      // 使用  continue 实现；
+      continue;
+    }
   }
 
-  test('验证抛出错误', () => {
-    expect(()=>hasError()).toThrow(); //函数是否抛出错误
-    expect(()=>hasError()).toThrow('错误'); //函数是否抛出相同的错误提示
-    expect(()=>hasError()).toThrow(/错/); // 错误提示是否匹配到 ‘错’
+  function main(fn) {
+    sleep(1000);
+    console.log('等待结束');
+    fn('getData');
+  }
+
+  test('异步测试', (done) => {
+    function get(res) {
+      try {
+        expect(res).toBe('getData');
+        done();
+      } catch (error) {
+        done(error);
+      }
+    }
+
+
+    main(get);
   });
+
 
 });
