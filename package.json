@@ -3,12 +3,11 @@
   "scripts": {
     "start": "umi dev",
     "build": "umi build",
-    "umi ui":"umi ui",
+    "umi ui": "umi ui",
     "test": "umi test",
     "coverage": "umi test --coverage",
     "lint": "eslint {src,mock,tests}/**/*.{js,jsx} --fix",
     "precommit": "lint-staged"
-    
   },
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
@@ -19,8 +18,12 @@
     "react-virtualized-auto-sizer": "^1.0.6"
   },
   "devDependencies": {
+    "@testing-library/react": "^12.1.2",
     "@umijs/preset-ui": "^2.2.9",
     "babel-eslint": "^9.0.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
+    "enzyme-to-json": "^3.6.2",
     "eslint": "^5.4.0",
     "eslint-config-umi": "^1.4.0",
     "eslint-plugin-flowtype": "^2.50.0",

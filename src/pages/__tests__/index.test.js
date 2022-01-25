@@ -14,33 +14,28 @@ describe('Page: index', () => {
 
 
 describe('简单测试', () => {
-
-  function sleep(delay) {
-    var start = (new Date()).getTime();
-    while ((new Date()).getTime() - start < delay) {
-      // 使用  continue 实现；
-      continue;
-    }
+  function getPost() {
+    return fetch('https://v1.hitokoto.cn');
   }
 
-  function main(fn) {
-    sleep(1000);
-    console.log('等待结束');
-    fn('getData');
-  }
-
-  test('异步测试', (done) => {
-    function get(res) {
-      try {
-        expect(res).toBe('getData');
-        done();
-      } catch (error) {
-        done(error);
-      }
+  test('请求测试', async () => {
+    try {
+      const response = await getPost();
+      const data = await response.json();
+      expect(data.id).not.toBeNull();
+    } catch (error) {
+      expect(error.toString().indexof('404') > -1).toBeTruthy();
     }
 
+  });
 
-    main(get);
+  
+  test('请求测试2', () => {
+    return getPost().then((response) => response.json()).then((data) => {
+      expect(data.id).not.toBeNull();
+    }).catch((e) => {
+      expect(e.toString().indexof('404') > -1).toBeTruthy();
+    });
   });
 
 
