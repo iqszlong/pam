@@ -5,8 +5,6 @@ import { CopyToClipboard } from 'react-copy-to-clipboard';
 import Style from './index.css';
 import RatioBox from '../components/RatioBox';
 
-
-
 const host = '//localhost:3004';
 
 function PhotoItems(props) {
@@ -21,9 +19,13 @@ function PhotoItems(props) {
         preview={{
           src: item.path,
         }}
+        placeholder={<Image preview={false} src={item.minimal} width="100%" height="100%" />}
       />
       <div className={Style.ctrl}>
-        <CopyToClipboard onCopy={() => message.success('复制成功')} text={ item.path.includes('http') ? item.path : `http:${item.path}`}>
+        <CopyToClipboard
+          onCopy={() => message.success('复制成功')}
+          text={item.path.includes('http') ? item.path : `http:${item.path}`}
+        >
           <Tooltip title="复制完整路径" placement="bottom">
             <Button size="small">
               <CopyOutlined />
@@ -41,7 +43,7 @@ class index extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      current: 'RQ-star241',
+      current: '',
       data: {}, //所有数据
       menu: [],
       list: [],
@@ -57,7 +59,7 @@ class index extends Component {
         //获取数据
         // console.info(data);
         const frist = data[0];
-        const key = `${frist.dir}${frist.cag}`;
+        const key = frist.prop;
         const os_name = frist.os_name;
         this.setState({
           menu: data,
@@ -74,7 +76,7 @@ class index extends Component {
   handleClick = e => {
     // console.log('click ', e);
     const key = e.key;
-    const menuItem = this.state.menu.filter(el => `${el.dir}${el.cag}` === key);
+    const menuItem = this.state.menu.filter(el => `${el.prop}` === key);
     const space_name = menuItem[0]['os_name'];
     // console.log(space_name);
     if (this.state.current !== key) {
@@ -87,6 +89,9 @@ class index extends Component {
   // space_name 空间名
   // key 目录属性名 dir+cag
   getData(space_name, key) {
+    // this.setState({
+    //   list:[]//先清空数据
+    // })
     if (this.state.data.hasOwnProperty(key)) {
       this.setState({
         list: this.state.data[`${key}`],
@@ -116,7 +121,7 @@ class index extends Component {
       <>
         <Menu onClick={this.handleClick} selectedKeys={[this.state.current]} mode="horizontal">
           {this.state.menu.map(item => (
-            <Menu.Item key={`${item.dir}${item.cag}`}>
+            <Menu.Item key={`${item.prop}`}>
               <span>{item.title || ''}</span>
             </Menu.Item>
           ))}
