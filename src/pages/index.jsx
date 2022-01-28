@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import { Image, Menu, Button, Tooltip, message } from 'antd';
-import { CopyOutlined } from '@ant-design/icons';
+import { CopyOutlined, LinkOutlined } from '@ant-design/icons';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import Style from './index.css';
 import RatioBox from '../components/RatioBox';
@@ -15,7 +15,7 @@ function PhotoItems(props) {
         width="100%"
         height="100%"
         src={item.min}
-        alt={item.id}
+        alt={item.file_name}
         preview={{
           src: item.path,
         }}
@@ -26,7 +26,14 @@ function PhotoItems(props) {
           onCopy={() => message.success('复制成功')}
           text={item.path.includes('http') ? item.path : `http:${item.path}`}
         >
-          <Tooltip title="复制完整路径" placement="bottom">
+          <Tooltip title="复制图片链接" placement="bottom">
+            <Button size="small">
+              <LinkOutlined />
+            </Button>
+          </Tooltip>
+        </CopyToClipboard>
+        <CopyToClipboard onCopy={() => message.success('复制成功')} text={item.file_name}>
+          <Tooltip title="复制文件名" placement="bottom">
             <Button size="small">
               <CopyOutlined />
             </Button>
@@ -119,6 +126,7 @@ class index extends Component {
   render() {
     return (
       <>
+      <div className={Style.page_nav}>
         <Menu onClick={this.handleClick} selectedKeys={[this.state.current]} mode="horizontal">
           {this.state.menu.map(item => (
             <Menu.Item key={`${item.prop}`}>
@@ -126,6 +134,7 @@ class index extends Component {
             </Menu.Item>
           ))}
         </Menu>
+        </div>
 
         <div className={Style.layout}>
           <PhotoItems data={this.state.list}></PhotoItems>
